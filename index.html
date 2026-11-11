@@ -2,12 +2,6 @@
 layout: default
 ---
 <section id="profile" class="profile" hidden></section>
-<nav class="chips" aria-label="篩選小說">
-  <a class="chip" data-n="" href="{{ '/' | relative_url }}">全部</a>
-  {%- for n in site.data.novels -%}
-  <a class="chip" data-n="{{ n[0] }}" href="{{ '/' | relative_url }}?n={{ n[0] }}">{{ n[1].title }}</a>
-  {%- endfor -%}
-</nav>
 <div class="feed">
 {%- for post in site.posts -%}
   {% include teaser.html post=post %}

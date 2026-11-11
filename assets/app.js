@@ -10,7 +10,6 @@
   if (who) {
     // 個人頁：顯示這個角色的完整章節，從第一章排起
     feed.hidden = true;
-    document.querySelector('.chips').hidden = true;
     var box = document.querySelector('.chapters');
     box.hidden = false;
     box.querySelectorAll('.chapter').forEach(function (ch) {
@@ -41,9 +40,6 @@
     feed.querySelectorAll('.teaser').forEach(function (t) {
       var ok = !n || t.dataset.novel === n;
       t.hidden = !ok; if (ok) shown++;
-    });
-    document.querySelectorAll('.chip').forEach(function (ch) {
-      ch.classList.toggle('on', ch.dataset.n === n);
     });
   }
   document.querySelector('.empty').hidden = shown > 0;
