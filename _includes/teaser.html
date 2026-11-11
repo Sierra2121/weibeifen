@@ -12,8 +12,8 @@
         <a class="topic" href="{{ '/' | relative_url }}?n={{ p.novel }}">{{ site.data.novels[p.novel].title }}</a>
         <span class="time">{{ p.date | date: "%Y/%m/%d %H:%M" }}</span>
       </div>
-      <a class="text" href="{{ '/' | relative_url }}?c={{ p.character }}#{{ p.slug }}">{{ p.teaser | markdownify }}</a>
-      {% capture u %}{{ '/' | relative_url }}?c={{ p.character }}#{{ p.slug }}{% endcapture %}{% include actions.html key=p.slug url=u %}
+      <a class="text" href="{{ p.url | relative_url }}">{{ p.teaser | markdownify }}</a>
+      {% capture u %}{{ p.url | relative_url }}{% endcapture %}{% include actions.html key=p.slug url=u %}
     </div>
   </div>
 </article>

@@ -1,7 +1,6 @@
 {%- assign p = include.post -%}
-<section class="chapter" id="{{ p.slug }}" data-novel="{{ p.novel }}" data-char="{{ p.character }}">
-  <p class="ch-no">第 {{ include.no }} 章</p>
-  <h2>{{ p.title }}</h2>
-  <div class="ch-text">{{ p.content }}</div>
-  {% capture u %}{{ '/' | relative_url }}?c={{ p.character }}#{{ p.slug }}{% endcapture %}{% include actions.html key=p.slug url=u %}
-</section>
+<a class="chapter toc" id="{{ p.slug }}" href="{{ p.url | relative_url }}" data-novel="{{ p.novel }}" data-char="{{ p.character }}">
+  <span class="ch-no">第 {{ include.no }} 章</span>
+  <span class="ch-title">{{ p.title }}</span>
+  <span class="ch-go" aria-hidden="true">›</span>
+</a>

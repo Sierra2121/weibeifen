@@ -5,4 +5,5 @@ layout: default
 <section class="chapter">
   <h2>{{ page.title }}</h2>
   <div class="ch-text">{{ content }}</div>
+  {% capture u %}{{ page.url | relative_url }}{% endcapture %}{% include actions.html key=page.slug url=u %}
 </section>

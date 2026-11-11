@@ -94,3 +94,12 @@ a.text{display:block}
 .d-icon.line{display:grid;place-items:center}
 .avatar.sm{width:32px;height:32px;font-size:14px;flex:none}
 body.lock{overflow:hidden}
+/* 個人頁：章節目錄，點進去讀全文 */
+.chapters{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.chapter.toc{display:flex;align-items:baseline;gap:14px;margin:0;padding:16px 20px;border:0;border-radius:0;border-bottom:1px solid var(--line);color:inherit;text-decoration:none}
+.chapter.toc:last-child{border-bottom:0}
+.chapter.toc:hover{background:rgba(0,0,0,.03)}
+.chapter.toc .ch-no{flex:none;min-width:4.5em}
+.chapter.toc .ch-title{flex:1;font-family:"Noto Serif TC",serif;font-size:18px}
+.chapter.toc .ch-go{color:var(--sub)}
+.chapter.toc[hidden]{display:none}
