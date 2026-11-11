@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#e9e3f3"/>
+  <!-- 後髮 -->
+  <path d="M12 34 C10 16 22 8 32 8 C42 8 54 16 52 34 L52 50 C46 54 18 54 12 50 Z" fill="#3b2f2f"/>
+  <!-- 脖子與衣服 -->
+  <rect x="27" y="46" width="10" height="8" fill="#f6dccb"/>
+  <path d="M10 64 C12 54 20 51 32 51 C44 51 52 54 54 64 Z" fill="#8a9a6b"/>
+  <path d="M24 64 L24 55 L40 55 L40 64 Z" fill="#efe6d4"/>
+  <!-- 臉 -->
+  <ellipse cx="32" cy="33" rx="15" ry="16" fill="#f8e2d2"/>
+  <!-- 瀏海 -->
+  <path d="M16 30 C16 18 24 13 32 13 C40 13 48 18 48 30 C44 24 38 21 34 20 C33 24 29 26 24 26 C21 27 18 28 16 30 Z" fill="#3b2f2f"/>
+  <!-- 頭巾 -->
+  <path d="M15 22 C18 12 46 12 49 22 C44 17 20 17 15 22 Z" fill="#7a6a9e"/>
+  <circle cx="49" cy="20" r="2.6" fill="#7a6a9e"/>
+  <path d="M50 21 L55 26 L52 27 Z" fill="#7a6a9e"/>
+  <!-- 眼睛（動漫大眼） -->
+  <ellipse cx="25.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/>
+  <ellipse cx="38.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/>
+  <ellipse cx="25.5" cy="35" rx="2.2" ry="2.8" fill="#6b5a8e"/>
+  <ellipse cx="38.5" cy="35" rx="2.2" ry="2.8" fill="#6b5a8e"/>
+  <circle cx="24.4" cy="32.4" r="1.1" fill="#fff"/>
+  <circle cx="37.4" cy="32.4" r="1.1" fill="#fff"/>
+  <path d="M22 29.5 Q25.5 28 29 29.5" stroke="#3b2f2f" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <path d="M35 29.5 Q38.5 28 42 29.5" stroke="#3b2f2f" stroke-width="1" fill="none" stroke-linecap="round"/>
+  <!-- 腮紅與嘴 -->
+  <ellipse cx="22" cy="40" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".6"/>
+  <ellipse cx="42" cy="40" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".6"/>
+  <path d="M29.5 42 Q32 44 34.5 42" stroke="#9c5a52" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+</svg>
