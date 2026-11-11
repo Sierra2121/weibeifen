@@ -12,7 +12,7 @@
 ---
 layout: thread
 title: 第一支手機
-character: yu
+character: mo
 novel: yu
 teaser: |
   發在動態牆上的那一則：這章的重點或一個細節。

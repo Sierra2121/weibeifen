@@ -1,7 +1,7 @@
 ---
 layout: thread
 title: 竹足球框
-character: yu
+character: mo
 novel: yu
 teaser: |
   姊姊張開手，站在兩根曬衣竹竿中間。

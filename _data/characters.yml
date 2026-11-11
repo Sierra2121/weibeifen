@@ -1,10 +1,10 @@
 # 每個角色一段。id 用英文，貼文裡的 character: 要對得上。
 # avatar：放在 assets/avatars/ 的圖檔名；沒有圖就會顯示 glyph 那個字。
-yu:
-  name: 釉
-  handle: yu.unbacked
+mo:
+  name: 模
+  handle: mo.unbacked
   novel: yu
-  avatar: yu.svg
-  glyph: 釉
+  avatar: mo.svg
+  glyph: 模
   color: "#b9653f"
   bio: 大里長大，花蓮念書，回台中工作。小時候怕球，但喜歡踢。
