@@ -1,0 +1,26 @@
+{%- assign p = include.post -%}
+{%- assign c = site.data.characters[p.character] -%}
+{%- assign parts = p.content | split: '<hr />' -%}
+{%- assign total = parts | size -%}
+<article class="thread" data-novel="{{ p.novel }}" data-char="{{ p.character }}">
+  {%- for part in parts -%}
+  <div class="post{% if forloop.index > 1 %} more{% endif %}{% unless forloop.last %} linked{% endunless %}"{% if forloop.index > 1 and include.full != true %} hidden{% endif %}>
+    <a class="avatar" href="{{ '/' | relative_url }}?c={{ p.character }}" style="--c:{{ c.color }}" aria-label="{{ c.name }}">
+      {%- if c.avatar -%}<img src="{{ '/assets/avatars/' | append: c.avatar | relative_url }}" alt="">{%- else -%}{{ c.glyph }}{%- endif -%}
+    </a>
+    <div class="body">
+      <div class="meta">
+        <a class="name" href="{{ '/' | relative_url }}?c={{ p.character }}">{{ c.name }}</a>
+        <span class="handle">@{{ c.handle }}</span>
+        <a class="time" href="{{ p.url | relative_url }}">{{ p.date | date: "%Y/%m/%d %H:%M" }}</a>
+      </div>
+      {%- if total > 1 -%}<span class="count">{{ forloop.index }}/{{ total }}</span>{%- endif -%}
+      <div class="text">{{ part }}</div>
+    </div>
+  </div>
+  {%- endfor -%}
+  {%- if total > 1 and include.full != true -%}
+  <button class="expand" type="button">展開串文 · 還有 {{ total | minus: 1 }} 則</button>
+  {%- endif -%}
+  <div class="foot-tag"><a href="{{ '/' | relative_url }}?n={{ p.novel }}">#{{ site.data.novels[p.novel].title }}</a></div>
+</article>

@@ -1,0 +1,11 @@
+title: 未備份
+author: 畝
+description: 畝的小說。故事由角色自己發文。
+baseurl: "/weibeifen"
+url: "https://sierra2121.github.io"
+timezone: Asia/Taipei
+lang: zh-Hant
+markdown: kramdown
+permalink: /t/:title/
+exclude:
+  - README.md
