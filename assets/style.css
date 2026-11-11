@@ -51,11 +51,27 @@ a{color:inherit;text-decoration:none}
 .back{display:inline-block;margin:4px 0 12px;color:var(--sub);font-size:14px}
 .empty{text-align:center;color:var(--sub)}
 .foot{max-width:620px;margin:0 auto;padding:0 16px 32px;font-size:12px;color:var(--sub);text-align:center}
-.read{display:inline-block;margin-top:4px;color:var(--accent);font-size:14px}
-.read:hover{text-decoration:underline}
 .chapter{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 22px;margin-bottom:14px;scroll-margin-top:72px}
 .ch-no{margin:0;font-size:13px;color:var(--sub);letter-spacing:.2em}
 .chapter h2{margin:.1em 0 .8em;font-family:"Noto Serif TC",serif;font-weight:600;font-size:22px}
 .ch-text p{margin:0 0 1em}
 .ch-text hr{border:0;margin:1.6em 0;text-align:center;color:var(--sub)}
 .ch-text hr::after{content:"·  ·  ·"}
+a.text{display:block}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin:6px 0 0 -8px;position:relative}
+.act{display:inline-flex;align-items:center;gap:4px;padding:6px 8px;border:0;border-radius:999px;background:none;color:var(--sub);font:inherit;font-size:13px;cursor:pointer}
+.act:hover{background:var(--chip)}
+.act svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.like.on{color:#e0245e}.like.on svg{fill:currentColor}
+.repost.on{color:var(--accent)}
+.like.pop svg{animation:pop .3s}
+@keyframes pop{50%{transform:scale(1.3)}}
+.toast{font-size:12px;color:var(--sub);margin-left:4px}
+.comments{flex-basis:100%;padding:6px 8px 4px}
+.clist{list-style:none;margin:0 0 6px;padding:0;font-size:14px}
+.clist li{padding:6px 0;border-top:1px solid var(--line)}
+.clist b{margin-right:6px}
+.cform{display:flex;gap:6px}
+.cform input{flex:1;min-width:0;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font:inherit;font-size:14px;background:var(--bg)}
+.cform button{padding:6px 14px;border:0;border-radius:999px;background:var(--ink);color:#fff;font:inherit;font-size:14px;cursor:pointer}
+.chapter .actions{margin-top:10px;padding-top:6px;border-top:1px solid var(--line)}
