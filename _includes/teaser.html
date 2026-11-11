@@ -1,0 +1,19 @@
+{%- assign p = include.post -%}
+{%- assign c = site.data.characters[p.character] -%}
+<article class="thread teaser" data-novel="{{ p.novel }}" data-char="{{ p.character }}">
+  <div class="post">
+    <a class="avatar" href="{{ '/' | relative_url }}?c={{ p.character }}" style="--c:{{ c.color }}" aria-label="{{ c.name }}">
+      {%- if c.avatar -%}<img src="{{ '/assets/avatars/' | append: c.avatar | relative_url }}" alt="">{%- else -%}{{ c.glyph }}{%- endif -%}
+    </a>
+    <div class="body">
+      <div class="meta">
+        <a class="name" href="{{ '/' | relative_url }}?c={{ p.character }}">{{ c.name }}</a>
+        <span class="handle">@{{ c.handle }}</span>
+        <span class="time">{{ p.date | date: "%Y/%m/%d %H:%M" }}</span>
+      </div>
+      <div class="text">{{ p.teaser | markdownify }}</div>
+      <a class="read" href="{{ '/' | relative_url }}?c={{ p.character }}#{{ p.slug }}">閱讀全章〈{{ p.title }}〉→</a>
+    </div>
+  </div>
+  <div class="foot-tag"><a href="{{ '/' | relative_url }}?n={{ p.novel }}">#{{ site.data.novels[p.novel].title }}</a></div>
+</article>

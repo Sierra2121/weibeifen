@@ -1,0 +1,6 @@
+{%- assign p = include.post -%}
+<section class="chapter" id="{{ p.slug }}" data-novel="{{ p.novel }}" data-char="{{ p.character }}">
+  <p class="ch-no">第 {{ include.no }} 章</p>
+  <h2>{{ p.title }}</h2>
+  <div class="ch-text">{{ p.content }}</div>
+</section>

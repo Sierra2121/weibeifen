@@ -10,7 +10,13 @@ layout: default
 </nav>
 <div class="feed">
 {%- for post in site.posts -%}
-  {% include thread.html post=post %}
+  {% include teaser.html post=post %}
+{%- endfor -%}
+</div>
+<div class="chapters" hidden>
+{%- assign ordered = site.posts | reverse -%}
+{%- for post in ordered -%}
+  {% include chapter.html post=post no=forloop.index %}
 {%- endfor -%}
 </div>
 <p class="empty" hidden>這裡還沒有貼文。</p>

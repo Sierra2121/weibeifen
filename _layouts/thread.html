@@ -1,5 +1,8 @@
 ---
 layout: default
 ---
-<a class="back" href="{{ '/' | relative_url }}">← 回到動態</a>
-{% include thread.html post=page full=true %}
+<a class="back" href="{{ '/' | relative_url }}?c={{ page.character }}">← 回到{{ site.data.characters[page.character].name }}的頁面</a>
+<section class="chapter">
+  <h2>{{ page.title }}</h2>
+  <div class="ch-text">{{ content }}</div>
+</section>
