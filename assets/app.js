@@ -36,9 +36,12 @@
       if (t) setTimeout(function () { t.scrollIntoView(); }, 50);
     }
   } else {
-    // 動態牆：每章一則重點
+    // 動態牆：每章一則重點（也可篩選小說、已說讚、已轉發）
+    var liked = q.get('liked'), rp = q.get('reposted');
+    function has(k) { try { return JSON.parse(localStorage.getItem('wb:' + k)) === true; } catch (e) { return false; } }
     feed.querySelectorAll('.teaser').forEach(function (t) {
-      var ok = !n || t.dataset.novel === n;
+      var key = t.querySelector('.actions').dataset.key;
+      var ok = (!n || t.dataset.novel === n) && (!liked || has('like:' + key)) && (!rp || has('rp:' + key));
       t.hidden = !ok; if (ok) shown++;
     });
   }
@@ -73,4 +76,17 @@
     };
     draw();
   });
+})();
+
+// 側邊選單
+(function () {
+  var btn = document.querySelector('.menu-btn'), d = document.querySelector('.drawer'), sc = document.querySelector('.scrim');
+  if (!btn) return;
+  function toggle(open) {
+    d.classList.toggle('open', open); sc.hidden = !open; document.body.classList.toggle('lock', open);
+    btn.setAttribute('aria-expanded', open); d.setAttribute('aria-hidden', !open);
+  }
+  btn.onclick = function () { toggle(!d.classList.contains('open')); };
+  sc.onclick = function () { toggle(false); };
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
 })();
