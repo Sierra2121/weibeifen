@@ -29,7 +29,7 @@
   <p class="d-label">角色</p>
   {%- for ch in site.data.characters -%}
   {%- assign c = ch[1] -%}
-  <a class="d-item" href="{{ '/' | relative_url }}?c={{ ch[0] }}"><span class="avatar sm" style="--c:{{ c.color }}">{%- if c.avatar -%}<img src="{{ '/assets/avatars/' | append: c.avatar | relative_url }}" alt="">{%- else -%}{{ c.glyph }}{%- endif -%}</span>{{ c.name }}<small>{{ site.data.novels[c.novel].title }}</small></a>
+  <a class="d-item" href="{{ '/' | relative_url }}?c={{ ch[0] }}"><span class="avatar sm" style="--c:{{ c.color }}">{%- if c.avatar -%}<img src="{{ '/assets/avatars/' | append: c.avatar | relative_url }}?v={{ site.time | date: '%s' }}" alt="">{%- else -%}{{ c.glyph }}{%- endif -%}</span>{{ c.name }}<small>{{ site.data.novels[c.novel].title }}</small></a>
   {%- endfor -%}
   <p class="d-label">其他</p>
   <a class="d-item" href="{{ '/' | relative_url }}"><span class="d-icon line"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7v9h-6v-6H9v6H3z"/></svg></span>全部動態</a>
@@ -42,7 +42,7 @@
 <footer class="foot">© 畝 · 所有故事皆為虛構，若有雷同，可能是記憶出了錯。</footer>
 <script id="chars" type="application/json">{{ site.data.characters | jsonify }}</script>
 <script id="novels" type="application/json">{{ site.data.novels | jsonify }}</script>
-<script>window.BASE = "{{ site.baseurl }}";</script>
+<script>window.BASE = "{{ site.baseurl }}"; window.VER = "{{ site.time | date: '%s' }}";</script>
 <script src="{{ '/assets/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>
 </html>

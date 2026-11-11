@@ -3,7 +3,7 @@
 <article class="thread teaser" data-novel="{{ p.novel }}" data-char="{{ p.character }}">
   <div class="post">
     <a class="avatar" href="{{ '/' | relative_url }}?c={{ p.character }}" style="--c:{{ c.color }}" aria-label="{{ c.name }}">
-      {%- if c.avatar -%}<img src="{{ '/assets/avatars/' | append: c.avatar | relative_url }}" alt="">{%- else -%}{{ c.glyph }}{%- endif -%}
+      {%- if c.avatar -%}<img src="{{ '/assets/avatars/' | append: c.avatar | relative_url }}?v={{ site.time | date: '%s' }}" alt="">{%- else -%}{{ c.glyph }}{%- endif -%}
     </a>
     <div class="body">
       <div class="meta">

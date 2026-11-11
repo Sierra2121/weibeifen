@@ -21,7 +21,7 @@
     var prof = document.getElementById('profile');
     var av = document.createElement('div');
     av.className = 'avatar'; av.style.setProperty('--c', who.color || '#999');
-    if (who.avatar) { var im = new Image(); im.src = BASE + '/assets/avatars/' + who.avatar; im.alt = ''; av.appendChild(im); }
+    if (who.avatar) { var im = new Image(); im.src = BASE + '/assets/avatars/' + who.avatar + '?v=' + (window.VER || ''); im.alt = ''; av.appendChild(im); }
     else av.textContent = who.glyph || who.name.charAt(0);
     var info = document.createElement('div');
     var h = document.createElement('h1'); h.textContent = who.name;
