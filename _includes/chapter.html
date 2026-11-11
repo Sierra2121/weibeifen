@@ -1,5 +1,5 @@
 {%- assign p = include.post -%}
-<a class="chapter toc" id="{{ p.slug }}" href="{{ p.url | relative_url }}" data-novel="{{ p.novel }}" data-char="{{ p.character }}">
+<a class="chapter toc" id="{{ p.slug }}" href="{{ p.url | relative_url }}" data-novel="{{ p.novel }}" data-char="{{ p.character }}" data-no="{{ p.chapter }}">
   <span class="ch-no">第 {{ include.no }} 章</span>
   <span class="ch-title">{{ p.title }}</span>
   <span class="ch-go" aria-hidden="true">›</span>

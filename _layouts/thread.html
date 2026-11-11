@@ -5,5 +5,13 @@ layout: default
 <section class="chapter">
   <h2>{{ page.title }}</h2>
   <div class="ch-text">{{ content }}</div>
+  {%- assign want = page.chapter | plus: 1 -%}
+  {%- assign nx = nil -%}
+  {%- for p in site.posts -%}{%- if p.character == page.character and p.novel == page.novel and p.chapter == want -%}{%- assign nx = p -%}{%- endif -%}{%- endfor -%}
+  {%- if nx -%}
+  <a class="next-ch" href="{{ nx.url | relative_url }}"><span class="nc-label">下一章</span><span class="nc-title">{{ nx.title }}</span><span class="nc-go" aria-hidden="true">›</span></a>
+  {%- else -%}
+  <a class="next-ch end" href="{{ '/' | relative_url }}?c={{ page.character }}"><span class="nc-label">這是目前最後一章</span><span class="nc-title">回到目錄</span><span class="nc-go" aria-hidden="true">›</span></a>
+  {%- endif %}
   {% capture u %}{{ page.url | relative_url }}{% endcapture %}{% include actions.html key=page.slug url=u %}
 </section>

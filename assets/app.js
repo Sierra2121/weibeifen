@@ -12,6 +12,10 @@
     feed.hidden = true;
     var box = document.querySelector('.chapters');
     box.hidden = false;
+    // 照 front matter 的 chapter 編號排，不照發文日期
+    Array.prototype.slice.call(box.querySelectorAll('.chapter'))
+      .sort(function (a, b) { return (+a.dataset.no || 0) - (+b.dataset.no || 0); })
+      .forEach(function (ch) { box.appendChild(ch); });
     box.querySelectorAll('.chapter').forEach(function (ch) {
       var ok = ch.dataset.char === c && (!n || ch.dataset.novel === n);
       ch.hidden = !ok;
