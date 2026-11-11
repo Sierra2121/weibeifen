@@ -75,3 +75,6 @@ a.text{display:block}
 .cform input{flex:1;min-width:0;padding:8px 12px;border:1px solid var(--line);border-radius:999px;font:inherit;font-size:14px;background:var(--bg)}
 .cform button{padding:6px 14px;border:0;border-radius:999px;background:var(--ink);color:#fff;font:inherit;font-size:14px;cursor:pointer}
 .chapter .actions{margin-top:10px;padding-top:6px;border-top:1px solid var(--line)}
+.sep{color:var(--sub);font-size:14px}
+.topic{color:var(--sub);font-size:14px}
+.topic:hover{text-decoration:underline}
