@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="sans-serif">
+<rect width="640" height="230" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">光纖：光在細細的玻璃裡，一路反彈著跑</text>
+<rect x="40" y="60" width="560" height="60" rx="30" fill="#e8f1f6" stroke="#6f8fa3" stroke-width="2"/><rect x="40" y="76" width="560" height="28" fill="#cfe5f2" stroke="none"/>
+<polyline points="60,90 110,78 160,102 210,78 260,102 310,78 360,102 410,78 460,102 510,78 560,102 610,78" fill="none" stroke="#c0392b" stroke-width="2.5"/>
+<text x="60" y="140" font-size="12" fill="#555">中間（核心）：光走的地方</text><text x="400" y="140" font-size="12" fill="#555">外面一層：把光反射回去</text>
+<rect x="40" y="156" width="560" height="64" rx="8" fill="#eef3f6" stroke="#9fb6c4"/>
+<text x="320" y="178" font-size="13" text-anchor="middle" fill="#333">光碰到核心跟外層的交界，角度夠斜，就會整個彈回來，不會漏出去（全反射）</text>
+<text x="320" y="198" font-size="13" text-anchor="middle" fill="#333">光在玻璃裡一秒大約跑 20 萬公里 → 台中到台北，不到千分之一秒</text>
+<text x="320" y="214" font-size="12" text-anchor="middle" fill="#777">視訊會卡，大多是手機跟網路處理的時間，不是路太遠</text>
+</svg>
