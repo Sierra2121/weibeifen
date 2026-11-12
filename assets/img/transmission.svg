@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" font-family="sans-serif">
+<rect width="640" height="260" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">為什麼電要用超高壓送很遠？</text>
+<rect x="20" y="60" width="100" height="44" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/><text x="70.0" y="87" font-size="12" text-anchor="middle" fill="#333">發電廠</text><rect x="145" y="60" width="110" height="44" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/><text x="200.0" y="87" font-size="12" text-anchor="middle" fill="#333">升壓變電所</text><rect x="285" y="60" width="110" height="44" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/><text x="340.0" y="87" font-size="12" text-anchor="middle" fill="#333">很長的電線</text><rect x="425" y="60" width="110" height="44" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/><text x="480.0" y="87" font-size="12" text-anchor="middle" fill="#333">降壓變電所</text><rect x="560" y="60" width="60" height="44" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/><text x="590.0" y="87" font-size="12" text-anchor="middle" fill="#333">你家</text><line x1="120" y1="82" x2="145" y2="82" stroke="#333" stroke-width="2"/><line x1="255" y1="82" x2="285" y2="82" stroke="#c0392b" stroke-width="3"/><line x1="395" y1="82" x2="425" y2="82" stroke="#c0392b" stroke-width="3"/><line x1="535" y1="82" x2="560" y2="82" stroke="#333" stroke-width="2"/><text x="340" y="124" font-size="12" text-anchor="middle" fill="#c0392b">34 萬 5 千伏特（超高壓）</text><text x="590" y="124" font-size="12" text-anchor="middle" fill="#333">110V</text>
+<rect x="40" y="146" width="560" height="104" rx="8" fill="#eef3f6" stroke="#9fb6c4"/>
+<text x="320" y="168" font-size="13" text-anchor="middle" fill="#333">電線本身有一點點電阻，電流流過去會發熱，熱就是浪費掉的電</text>
+<text x="320" y="190" font-size="13" text-anchor="middle" fill="#333">浪費掉的熱 ＝ 電流 × 電流 × 電阻 → 電流變一半，浪費變四分之一</text>
+<text x="320" y="212" font-size="13" text-anchor="middle" fill="#333">要送一樣多的電（電功率 ＝ 電壓 × 電流），電壓拉很高，電流就可以很小</text>
+<text x="320" y="236" font-size="13" text-anchor="middle" fill="#c0392b">所以送遠路用超高壓，快到家的時候再用變壓器降下來</text>
+</svg>
