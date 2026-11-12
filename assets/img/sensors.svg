@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 380" font-family="sans-serif">
+<rect width="640" height="380" fill="#fbfaf7"/>
+<text x="160" y="22" font-size="14" text-anchor="middle" fill="#333" font-weight="bold">① 對射式光電開關</text>
+<rect x="30" y="50" width="40" height="40" rx="4" fill="#cfe0ea" stroke="#6f8fa3" stroke-width="1.6"/>
+<text x="50" y="105" font-size="11" text-anchor="middle" fill="#333">發光器</text>
+<rect x="250" y="50" width="40" height="40" rx="4" fill="#cfe0ea" stroke="#6f8fa3" stroke-width="1.6"/>
+<text x="270" y="105" font-size="11" text-anchor="middle" fill="#333">受光器</text>
+<line x1="70" y1="70" x2="250" y2="70" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/>
+<rect x="140" y="52" width="36" height="36" rx="4" fill="#9aa3aa" stroke="#555" stroke-width="1.6"/>
+<text x="158" y="128" font-size="11" text-anchor="middle" fill="#c0392b">東西擋住光 → 受光器收不到 → 有東西</text>
+<text x="480" y="22" font-size="14" text-anchor="middle" fill="#333" font-weight="bold">② 反射板式</text>
+<rect x="350" y="50" width="50" height="40" rx="4" fill="#cfe0ea" stroke="#6f8fa3" stroke-width="1.6"/>
+<text x="375" y="105" font-size="11" text-anchor="middle" fill="#333">發光＋受光</text>
+<rect x="590" y="45" width="10" height="50" fill="#c9a227"/>
+<text x="595" y="108" font-size="11" text-anchor="middle" fill="#333">反射板</text>
+<line x1="400" y1="62" x2="590" y2="62" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/><line x1="590" y1="78" x2="400" y2="78" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="480" y="128" font-size="11" text-anchor="middle" fill="#c0392b">光打到反射板再彈回來；東西擋在中間 → 收不到</text>
+<text x="160" y="170" font-size="14" text-anchor="middle" fill="#333" font-weight="bold">③ 擴散反射式（循跡車那種）</text>
+<rect x="30" y="195" width="50" height="40" rx="4" fill="#cfe0ea" stroke="#6f8fa3" stroke-width="1.6"/>
+<text x="55" y="250" font-size="11" text-anchor="middle" fill="#333">發光＋受光</text>
+<rect x="200" y="190" width="50" height="50" rx="4" fill="#9aa3aa" stroke="#555" stroke-width="1.6"/>
+<text x="225" y="258" font-size="11" text-anchor="middle" fill="#333">東西</text>
+<line x1="80" y1="207" x2="200" y2="207" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/><line x1="200" y1="223" x2="80" y2="223" stroke="#c0392b" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="160" y="276" font-size="11" text-anchor="middle" fill="#c0392b">光打到東西本身反射回來 → 收到 → 有東西</text>
+<text x="480" y="170" font-size="14" text-anchor="middle" fill="#333" font-weight="bold">④ 近接開關（電感式）</text>
+<rect x="360" y="195" width="70" height="40" rx="4" fill="#cfe0ea" stroke="#6f8fa3" stroke-width="1.6"/>
+<text x="395" y="220" font-size="11" text-anchor="middle" fill="#333">近接開關</text>
+<path d="M430 203 Q444.4 215 430 227" fill="none" stroke="#2e6db0" stroke-width="1.4"/>
+<path d="M430 193 Q456.4 215 430 237" fill="none" stroke="#2e6db0" stroke-width="1.4"/>
+<path d="M430 183 Q468.4 215 430 247" fill="none" stroke="#2e6db0" stroke-width="1.4"/>
+<rect x="500" y="197" width="40" height="36" rx="4" fill="#7f8890" stroke="#444" stroke-width="1.6"/>
+<text x="520" y="250" font-size="11" text-anchor="middle" fill="#333">金屬</text>
+<text x="480" y="276" font-size="11" text-anchor="middle" fill="#2e6db0">線圈在前面做出一團磁場，金屬靠近 → 磁場被干擾 → 有東西</text>
+<rect x="40" y="300" width="560" height="66" rx="8" fill="#eef3f6" stroke="#9fb6c4"/>
+<text x="320" y="322" font-size="13" text-anchor="middle" fill="#333">感測器不用碰到東西，就知道「有沒有東西在那裡」</text>
+<text x="320" y="342" font-size="13" text-anchor="middle" fill="#333">它把結果變成一個「有／沒有」的訊號，送進 PLC 的輸入（X）</text>
+<text x="320" y="360" font-size="13" text-anchor="middle" fill="#555">就跟按鈕一樣：有東西＝按下去，沒東西＝放開</text>
+</svg>

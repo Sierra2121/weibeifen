@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" font-family="sans-serif">
+<rect width="640" height="280" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">萌做的盒子裡面：12V 電源＋繼電器自保</text>
+<rect x="20" y="60" width="110" height="60" rx="8" fill="#e4e7ea" stroke="#6f7a82"/><text x="75" y="86" font-size="12" text-anchor="middle" fill="#333">變壓器</text><text x="75" y="104" font-size="11" text-anchor="middle" fill="#555">110V → 12V</text>
+<text x="75" y="140" font-size="11" text-anchor="middle" fill="#777">牆壁插座的電，在這裡</text><text x="75" y="154" font-size="11" text-anchor="middle" fill="#777">先變成安全的 12V</text>
+<line x1="130" y1="90" x2="170" y2="90" stroke="#333" stroke-width="2"/>
+<circle cx="200" cy="90" r="18" fill="#c0392b" stroke="#333"/><text x="200" y="95" font-size="12" text-anchor="middle" fill="#fff">停止</text>
+<circle cx="290" cy="90" r="18" fill="#2e7d4f" stroke="#333"/><text x="290" y="95" font-size="12" text-anchor="middle" fill="#fff">起動</text>
+<line x1="218" y1="90" x2="260" y2="90" stroke="#333" stroke-width="2"/><line x1="308" y1="90" x2="380" y2="90" stroke="#333" stroke-width="2"/>
+<line x1="245" y1="90" x2="245" y2="150" stroke="#2e6db0" stroke-width="2"/><line x1="330" y1="90" x2="330" y2="150" stroke="#2e6db0" stroke-width="2"/><line x1="245" y1="150" x2="275" y2="150" stroke="#2e6db0" stroke-width="2"/><line x1="300" y1="150" x2="330" y2="150" stroke="#2e6db0" stroke-width="2"/>
+<line x1="275" y1="138" x2="275" y2="162" stroke="#2e6db0" stroke-width="3"/><line x1="300" y1="138" x2="300" y2="162" stroke="#2e6db0" stroke-width="3"/>
+<text x="288" y="182" font-size="11" text-anchor="middle" fill="#2e6db0">繼電器自己的接點（自保）</text>
+<rect x="380" y="62" width="110" height="56" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/><text x="435" y="86" font-size="12" text-anchor="middle" fill="#333">繼電器</text><text x="435" y="104" font-size="11" text-anchor="middle" fill="#555">（小型的接觸器）</text>
+<line x1="490" y1="90" x2="540" y2="90" stroke="#333" stroke-width="2"/>
+<circle cx="565" cy="90" r="22" fill="#f7d74a" stroke="#333" stroke-width="2"/><text x="565" y="95" font-size="11" text-anchor="middle" fill="#333">燈</text>
+<rect x="40" y="208" width="560" height="60" rx="8" fill="#eef3f6" stroke="#9fb6c4"/>
+<text x="320" y="230" font-size="13" text-anchor="middle" fill="#333">按綠色：繼電器吸住，燈亮，放手也一直亮（跟第 8 篇的自保一模一樣）</text>
+<text x="320" y="252" font-size="13" text-anchor="middle" fill="#333">按紅色：整條路斷掉，繼電器放開，燈暗</text>
+</svg>
