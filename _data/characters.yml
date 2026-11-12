@@ -26,6 +26,7 @@ yang:
 lin:
   name: 林
   handle: LIN.YA
+  avatar: lin.svg
   novel: feichang
   glyph: 林
   color: "#4f6d7a"
