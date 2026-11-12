@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 230" font-family="sans-serif">
+<rect width="640" height="230" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">日光燈 vs LED 燈管：一樣亮，用的電不一樣</text>
+<text x="40" y="80" font-size="13" fill="#333">舊日光燈管＋安定器</text>
+<rect x="220" y="60" width="320" height="30" fill="#9aa3aa"/><text x="550" y="80" font-size="13" fill="#333">約 40 瓦</text>
+<text x="40" y="140" font-size="13" fill="#333">LED 燈管</text>
+<rect x="220" y="120" width="144" height="30" fill="#3a9a5a"/><text x="374" y="140" font-size="13" fill="#333">約 18 瓦</text>
+<rect x="40" y="170" width="560" height="50" rx="8" fill="#eef3f6" stroke="#9fb6c4"/>
+<text x="320" y="190" font-size="13" text-anchor="middle" fill="#333">日光燈要靠安定器把電壓衝高才點得亮，很多電變成熱跑掉了</text>
+<text x="320" y="210" font-size="13" text-anchor="middle" fill="#333">LED 把電直接變成光，一樣亮，大概只要一半不到的電</text>
+</svg>
