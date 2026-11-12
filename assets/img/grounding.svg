@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="sans-serif">
+<rect width="640" height="300" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">接地：漏電的時候，給電一條比人更好走的路</text>
+<text x="165" y="54" font-size="14" text-anchor="middle" fill="#c0392b" font-weight="bold">沒有接地</text>
+<rect x="70" y="70" width="110" height="120" rx="8" fill="#e4e7ea" stroke="#555" stroke-width="2"/><text x="125" y="135" font-size="12" text-anchor="middle" fill="#333">洗衣機外殼</text>
+<path d="M90 100 l10 8 l-6 4 l10 8" fill="none" stroke="#e8a317" stroke-width="2.5"/><text x="125" y="92" font-size="11" text-anchor="middle" fill="#e8a317">裡面的線破皮，碰到外殼</text>
+<circle cx="235" cy="110" r="12" fill="#f2d6c9" stroke="#333"/><line x1="235" y1="122" x2="235" y2="170" stroke="#333" stroke-width="3"/><line x1="235" y1="135" x2="182" y2="140" stroke="#333" stroke-width="3"/><line x1="235" y1="170" x2="225" y2="200" stroke="#333" stroke-width="3"/><line x1="235" y1="170" x2="245" y2="200" stroke="#333" stroke-width="3"/>
+<line x1="30" y1="205" x2="300" y2="205" stroke="#8a6d3b" stroke-width="3"/><text x="40" y="222" font-size="11" fill="#8a6d3b">大地</text>
+<path d="M235 200 L235 205" stroke="#c0392b" stroke-width="4"/>
+<text x="165" y="248" font-size="12" text-anchor="middle" fill="#c0392b">人一摸外殼，電就從人的身體</text>
+<text x="165" y="266" font-size="12" text-anchor="middle" fill="#c0392b">流到地上 → 觸電</text>
+<text x="475" y="54" font-size="14" text-anchor="middle" fill="#2e7d4f" font-weight="bold">有接地</text>
+<rect x="380" y="70" width="110" height="120" rx="8" fill="#e4e7ea" stroke="#555" stroke-width="2"/><text x="435" y="135" font-size="12" text-anchor="middle" fill="#333">洗衣機外殼</text>
+<path d="M400 100 l10 8 l-6 4 l10 8" fill="none" stroke="#e8a317" stroke-width="2.5"/><text x="435" y="92" font-size="11" text-anchor="middle" fill="#e8a317">裡面的線破皮，碰到外殼</text>
+<circle cx="545" cy="110" r="12" fill="#f2d6c9" stroke="#333"/><line x1="545" y1="122" x2="545" y2="170" stroke="#333" stroke-width="3"/><line x1="545" y1="135" x2="492" y2="140" stroke="#333" stroke-width="3"/><line x1="545" y1="170" x2="535" y2="200" stroke="#333" stroke-width="3"/><line x1="545" y1="170" x2="555" y2="200" stroke="#333" stroke-width="3"/>
+<line x1="340" y1="205" x2="610" y2="205" stroke="#8a6d3b" stroke-width="3"/><text x="350" y="222" font-size="11" fill="#8a6d3b">大地</text>
+<path d="M400 190 L400 205" stroke="#2e7d4f" stroke-width="4"/><text x="360" y="200" font-size="11" fill="#2e7d4f">接地線</text>
+<text x="475" y="248" font-size="12" text-anchor="middle" fill="#2e7d4f">電從接地線直接流進大地，幾乎不經過人</text>
+<text x="475" y="266" font-size="12" text-anchor="middle" fill="#2e7d4f">漏電斷路器發現「去跟回不一樣」，馬上跳掉</text>
+</svg>
