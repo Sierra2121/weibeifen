@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 408" font-family="sans-serif">
+<rect width="640" height="408" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">閃爍電路：兩個計時器輪流</text>
+<line x1="40" y1="45" x2="40" y2="290" stroke="#333" stroke-width="4"/><line x1="600" y1="45" x2="600" y2="290" stroke="#333" stroke-width="4"/>
+<line x1="40" y1="90" x2="90" y2="90" stroke="#333" stroke-width="2"/>
+<line x1="90" y1="77" x2="90" y2="103" stroke="#c0392b" stroke-width="3"/><line x1="110" y1="77" x2="110" y2="103" stroke="#c0392b" stroke-width="3"/>
+<line x1="86" y1="103" x2="114" y2="77" stroke="#c0392b" stroke-width="2"/>
+<text x="100" y="70" font-size="13" text-anchor="middle" fill="#c0392b" font-weight="bold">T1</text>
+<line x1="110" y1="90" x2="200" y2="90" stroke="#333" stroke-width="2"/>
+<line x1="200" y1="90" x2="470" y2="90" stroke="#333" stroke-width="2"/>
+<path d="M476 75 Q466 90 476 105" fill="none" stroke="#333" stroke-width="2.5"/><path d="M500 75 Q510 90 500 105" fill="none" stroke="#333" stroke-width="2.5"/>
+<text x="488" y="68" font-size="13" text-anchor="middle" fill="#333" font-weight="bold">T0</text>
+<text x="488" y="122" font-size="11" text-anchor="middle" fill="#555">K10（1 秒）</text>
+<line x1="510" y1="90" x2="600" y2="90" stroke="#333" stroke-width="2"/>
+<text x="560" y="82" font-size="11" text-anchor="middle" fill="#555">先數 1 秒</text>
+<line x1="40" y1="170" x2="90" y2="170" stroke="#333" stroke-width="2"/>
+<line x1="90" y1="157" x2="90" y2="183" stroke="#2e6db0" stroke-width="3"/><line x1="110" y1="157" x2="110" y2="183" stroke="#2e6db0" stroke-width="3"/>
+<text x="100" y="150" font-size="13" text-anchor="middle" fill="#2e6db0" font-weight="bold">T0</text>
+<line x1="110" y1="170" x2="200" y2="170" stroke="#333" stroke-width="2"/>
+<line x1="200" y1="170" x2="470" y2="170" stroke="#333" stroke-width="2"/>
+<path d="M476 155 Q466 170 476 185" fill="none" stroke="#333" stroke-width="2.5"/><path d="M500 155 Q510 170 500 185" fill="none" stroke="#333" stroke-width="2.5"/>
+<text x="488" y="148" font-size="13" text-anchor="middle" fill="#333" font-weight="bold">T1</text>
+<text x="488" y="202" font-size="11" text-anchor="middle" fill="#555">K10（1 秒）</text>
+<line x1="510" y1="170" x2="600" y2="170" stroke="#333" stroke-width="2"/>
+<text x="560" y="162" font-size="11" text-anchor="middle" fill="#555">再數 1 秒</text>
+<line x1="40" y1="250" x2="90" y2="250" stroke="#333" stroke-width="2"/>
+<line x1="90" y1="237" x2="90" y2="263" stroke="#2e6db0" stroke-width="3"/><line x1="110" y1="237" x2="110" y2="263" stroke="#2e6db0" stroke-width="3"/>
+<text x="100" y="230" font-size="13" text-anchor="middle" fill="#2e6db0" font-weight="bold">T0</text>
+<line x1="110" y1="250" x2="200" y2="250" stroke="#333" stroke-width="2"/>
+<line x1="200" y1="250" x2="470" y2="250" stroke="#333" stroke-width="2"/>
+<path d="M476 235 Q466 250 476 265" fill="none" stroke="#333" stroke-width="2.5"/><path d="M500 235 Q510 250 500 265" fill="none" stroke="#333" stroke-width="2.5"/>
+<text x="488" y="228" font-size="13" text-anchor="middle" fill="#333" font-weight="bold">Y0</text>
+<line x1="510" y1="250" x2="600" y2="250" stroke="#333" stroke-width="2"/>
+<text x="560" y="242" font-size="11" text-anchor="middle" fill="#555">燈</text>
+<text x="40" y="318" font-size="13" fill="#333">T0：線圈一有電就開始數，數滿 1 秒，T0 的接點才會通。</text>
+<text x="40" y="340" font-size="13" fill="#333">T0 通了 → 燈 Y0 亮，同時 T1 開始數。T1 數滿 1 秒 → T1 的 b 接點斷開 → T0 被重置。</text>
+<text x="40" y="362" font-size="13" fill="#333">T0 一重置，燈就暗、T1 也跟著重置 → T1 的 b 接點又通了 → T0 重新開始數。</text>
+<text x="40" y="384" font-size="13" fill="#c0392b">這樣一直循環：暗 1 秒、亮 1 秒、暗 1 秒、亮 1 秒……</text>
+</svg>
