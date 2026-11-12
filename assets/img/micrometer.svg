@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="sans-serif">
+<rect width="640" height="300" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">分厘卡讀法（精度 0.01 公釐）</text>
+<rect x="40" y="90" width="360" height="70" fill="#e4e7ea" stroke="#9aa3aa"/>
+<line x1="40" y1="125" x2="400" y2="125" stroke="#333" stroke-width="2"/>
+<line x1="60" y1="125" x2="60" y2="105" stroke="#333" stroke-width="1.6"/>
+<text x="60" y="100" font-size="13" text-anchor="middle" fill="#333">0</text>
+<line x1="80.0" y1="125" x2="80.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="100" y1="125" x2="100" y2="105" stroke="#333" stroke-width="1.6"/>
+<line x1="120.0" y1="125" x2="120.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="140" y1="125" x2="140" y2="105" stroke="#333" stroke-width="1.6"/>
+<line x1="160.0" y1="125" x2="160.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="180" y1="125" x2="180" y2="105" stroke="#333" stroke-width="1.6"/>
+<line x1="200.0" y1="125" x2="200.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="220" y1="125" x2="220" y2="105" stroke="#333" stroke-width="1.6"/>
+<line x1="240.0" y1="125" x2="240.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="260" y1="125" x2="260" y2="105" stroke="#333" stroke-width="1.6"/>
+<text x="260" y="100" font-size="13" text-anchor="middle" fill="#333">5</text>
+<line x1="280.0" y1="125" x2="280.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="300" y1="125" x2="300" y2="105" stroke="#333" stroke-width="1.6"/>
+<line x1="320.0" y1="125" x2="320.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="340" y1="125" x2="340" y2="105" stroke="#333" stroke-width="1.6"/>
+<line x1="360.0" y1="125" x2="360.0" y2="140" stroke="#333" stroke-width="1.4"/>
+<line x1="380" y1="125" x2="380" y2="105" stroke="#333" stroke-width="1.6"/>
+<rect x="369.20000000000005" y="70" width="170" height="110" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/>
+<line x1="369.20000000000005" y1="179" x2="379.20000000000005" y2="179" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="170" x2="379.20000000000005" y2="170" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="161" x2="379.20000000000005" y2="161" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="152" x2="387.20000000000005" y2="152" stroke="#333" stroke-width="1.3"/>
+<text x="393.20000000000005" y="156" font-size="12" fill="#333">20</text>
+<line x1="369.20000000000005" y1="143" x2="379.20000000000005" y2="143" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="134" x2="379.20000000000005" y2="134" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="125" x2="379.20000000000005" y2="125" stroke="#c0392b" stroke-width="2.4"/>
+<text x="393.20000000000005" y="129" font-size="12" fill="#c0392b">23</text>
+<line x1="369.20000000000005" y1="116" x2="379.20000000000005" y2="116" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="107" x2="387.20000000000005" y2="107" stroke="#333" stroke-width="1.3"/>
+<text x="393.20000000000005" y="111" font-size="12" fill="#333">25</text>
+<line x1="369.20000000000005" y1="98" x2="379.20000000000005" y2="98" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="89" x2="379.20000000000005" y2="89" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="80" x2="379.20000000000005" y2="80" stroke="#333" stroke-width="1.3"/>
+<line x1="369.20000000000005" y1="71" x2="379.20000000000005" y2="71" stroke="#333" stroke-width="1.3"/>
+<text x="454.20000000000005" y="198" font-size="13" text-anchor="middle" fill="#333">套管（轉動的那一節）</text>
+<text x="200" y="198" font-size="13" text-anchor="middle" fill="#333">襯筒（固定不動）</text>
+<text x="200" y="64" font-size="11" text-anchor="middle" fill="#555">上排：每格 1 公釐　下排：剛好在中間的 0.5 公釐</text>
+<text x="40" y="228" font-size="14" fill="#c0392b">① 看套管邊緣左邊，襯筒露出來的刻度：上排到 7，下排的半格也露出來了 → 7.5</text>
+<text x="40" y="250" font-size="14" fill="#c0392b">② 看套管上哪一條，對齊襯筒中間那條橫線：第 23 條 → 0.23</text>
+<text x="40" y="276" font-size="15" font-weight="bold" fill="#333">答案：7.5 + 0.23 = 7.73 公釐</text>
+</svg>
