@@ -2,8 +2,17 @@
 layout: default
 ---
 <a class="back" href="{{ '/' | relative_url }}?c={{ page.character }}">← 回到{{ site.data.characters[page.character].name }}的頁面</a>
-<section class="chapter">
+{%- assign me = site.data.characters[page.character] -%}
+<section class="chapter read" data-char="{{ page.character }}" data-novel="{{ page.novel }}" style="--c:{{ me.color }}">
   <h2>{{ page.title }}</h2>
+  {%- if me.eras -%}
+  {%- assign y = page.date | date: "%Y" | plus: 0 -%}
+  {%- assign era = nil -%}
+  {%- for e in me.eras -%}{%- if e.year <= y -%}{%- assign era = e -%}{%- endif -%}{%- endfor -%}
+  {%- if era %}
+  <p class="era"><a href="{{ '/' | relative_url }}?c={{ page.character }}">{{ y }} 年的{{ me.name }}</a>　{{ era.bio }}</p>
+  {%- endif -%}
+  {%- endif %}
   <div class="ch-text">{{ content }}</div>
   {%- assign want = page.chapter | plus: 1 -%}
   {%- assign nx = nil -%}

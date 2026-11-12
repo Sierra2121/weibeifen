@@ -33,6 +33,36 @@
     var bio = document.createElement('p'); bio.textContent = who.bio || '';
     info.append(h, hd, bio);
     prof.append(av, info); prof.hidden = false;
+    prof.style.setProperty('--c', who.color || '#999');
+    function el(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
+    function chLink(no) { return no ? box.querySelector('a.toc[data-novel="' + who.novel + '"][data-no="' + no + '"]') : null; }
+    // 置頂一句話
+    if (who.pin) {
+      var pin = el('blockquote', 'pin', who.pin);
+      var src = chLink(who.pin_ch);
+      if (src) { var sm = el('small', null, '—— '); var sa = el('a', null, '〈' + src.querySelector('.ch-title').textContent + '〉'); sa.href = src.href; sm.appendChild(sa); pin.appendChild(sm); }
+      prof.appendChild(pin);
+    }
+    var after = prof;
+    function addBox(title, list) { var s = el('section', 'pbox'); s.style.setProperty('--c', who.color || '#999'); s.append(el('h3', null, title), list); after.after(s); after = s; }
+    // 那些年
+    if (who.eras && who.eras.length) {
+      var ul = el('ul', 'eras');
+      who.eras.forEach(function (e) { var li = el('li'); li.append(el('b', null, e.year), el('span', null, e.bio)); ul.appendChild(li); });
+      addBox('那些年的' + who.name, ul);
+    }
+    // 她的東西
+    if (who.items && who.items.length) {
+      var il = el('ul', 'items');
+      who.items.forEach(function (it) {
+        var li = el('li'), src = chLink(it.ch), w = src ? el('a') : el('div');
+        if (src) w.href = src.href;
+        w.append(el('b', null, it.name), el('span', null, it.note));
+        if (src) w.appendChild(el('em', null, '第一次出現：〈' + src.querySelector('.ch-title').textContent + '〉 ›'));
+        li.appendChild(w); il.appendChild(li);
+      });
+      addBox('她的東西', il);
+    }
     document.title = who.name + '｜未備份';
 
     if (location.hash) {
@@ -93,4 +123,31 @@
   btn.onclick = function () { toggle(!d.classList.contains('open')); };
   sc.onclick = function () { toggle(false); };
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') toggle(false); });
+})();
+
+// 章節頁：正文裡第一次出現的同一本小說的其他角色，變成可以點的名字
+(function () {
+  var sec = document.querySelector('.chapter.read');
+  if (!sec) return;
+  var chars = JSON.parse(document.getElementById('chars').textContent || '{}');
+  var text = sec.querySelector('.ch-text'); if (!text) return;
+  Object.keys(chars).forEach(function (id) {
+    var c = chars[id];
+    if (id === sec.dataset.char || c.novel !== sec.dataset.novel || !c.name) return;
+    var skip = c.skip || [];
+    var tw = document.createTreeWalker(text, NodeFilter.SHOW_TEXT), node;
+    while ((node = tw.nextNode())) {
+      if (node.parentNode.closest('a')) continue;
+      var s = node.nodeValue, i = -1;
+      while ((i = s.indexOf(c.name, i + 1)) !== -1) {
+        var bad = skip.some(function (w) { var k = w.indexOf(c.name); return k >= 0 && s.substr(i - k, w.length) === w; });
+        if (bad) continue;
+        var rest = node.splitText(i); rest.nodeValue = rest.nodeValue.slice(c.name.length);
+        var a = document.createElement('a'); a.className = 'mention'; a.textContent = c.name;
+        a.href = (window.BASE || '') + '/?c=' + id; a.style.setProperty('--c', c.color || '#999');
+        rest.parentNode.insertBefore(a, rest);
+        return;
+      }
+    }
+  });
 })();
