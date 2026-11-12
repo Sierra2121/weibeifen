@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 240" font-family="sans-serif">
+<rect width="640" height="240" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">石英鐘：一秒震 32768 次，除以 2 十五次</text>
+<rect x="30" y="60" width="110" height="60" rx="8" fill="#e8e2d0" stroke="#a89a6a"/><text x="85" y="86" font-size="12" text-anchor="middle" fill="#333">石英晶體</text><text x="85" y="104" font-size="11" text-anchor="middle" fill="#555">每秒 32768 次</text>
+<rect x="170" y="72" width="54" height="36" rx="5" fill="#cfe0ea" stroke="#6f8fa3"/><text x="197" y="95" font-size="12" text-anchor="middle" fill="#333">32768</text>
+<text x="232" y="64" font-size="11" text-anchor="middle" fill="#c0392b">÷2</text>
+<rect x="234" y="72" width="54" height="36" rx="5" fill="#cfe0ea" stroke="#6f8fa3"/><text x="261" y="95" font-size="12" text-anchor="middle" fill="#333">16384</text>
+<text x="296" y="64" font-size="11" text-anchor="middle" fill="#c0392b">÷2</text>
+<rect x="298" y="72" width="54" height="36" rx="5" fill="#cfe0ea" stroke="#6f8fa3"/><text x="325" y="95" font-size="12" text-anchor="middle" fill="#333">8192</text>
+<text x="360" y="64" font-size="11" text-anchor="middle" fill="#c0392b">÷2</text>
+<rect x="362" y="72" width="54" height="36" rx="5" fill="#cfe0ea" stroke="#6f8fa3"/><text x="389" y="95" font-size="12" text-anchor="middle" fill="#333">…</text>
+<text x="424" y="64" font-size="11" text-anchor="middle" fill="#c0392b">÷2</text>
+<rect x="426" y="72" width="54" height="36" rx="5" fill="#cfe0ea" stroke="#6f8fa3"/><text x="453" y="95" font-size="12" text-anchor="middle" fill="#333">4</text>
+<text x="488" y="64" font-size="11" text-anchor="middle" fill="#c0392b">÷2</text>
+<rect x="490" y="72" width="54" height="36" rx="5" fill="#cfe0ea" stroke="#6f8fa3"/><text x="517" y="95" font-size="12" text-anchor="middle" fill="#333">2</text>
+<text x="552" y="64" font-size="11" text-anchor="middle" fill="#c0392b">÷2</text>
+<rect x="554" y="72" width="54" height="36" rx="5" fill="#f7d74a" stroke="#6f8fa3"/><text x="581" y="95" font-size="12" text-anchor="middle" fill="#333">1</text>
+<line x1="140" y1="90" x2="170" y2="90" stroke="#333" stroke-width="2"/>
+<text x="380" y="140" font-size="12" text-anchor="middle" fill="#555">每除一次 2，就變慢一半</text>
+<rect x="40" y="158" width="560" height="70" rx="8" fill="#eef3f6" stroke="#9fb6c4"/>
+<text x="320" y="182" font-size="13" text-anchor="middle" fill="#333">32768 ＝ 2 × 2 × 2 × …（15 個 2）＝ 2 的 15 次方</text>
+<text x="320" y="204" font-size="13" text-anchor="middle" fill="#333">除以 2 十五次，剛好變成「一秒一次」→ 送一個脈波給步進馬達 → 秒針跳一格</text>
+<text x="320" y="222" font-size="12" text-anchor="middle" fill="#777">晶片裡的計數器，就是一個數到 32768 就輸出一次的計數器</text>
+</svg>
