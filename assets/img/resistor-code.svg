@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="sans-serif">
+<rect width="640" height="300" fill="#fbfaf7"/>
+<line x1="40" y1="70" x2="200" y2="70" stroke="#999" stroke-width="4"/><line x1="440" y1="70" x2="600" y2="70" stroke="#999" stroke-width="4"/>
+<rect x="200" y="40" width="240" height="60" rx="26" fill="#e9d8b4" stroke="#b89d6a"/>
+<rect x="240" y="40" width="18" height="60" fill="#7a4a24"/>
+<text x="249" y="122" font-size="15" text-anchor="middle" fill="#333">棕</text>
+<rect x="280" y="40" width="18" height="60" fill="#111"/>
+<text x="289" y="122" font-size="15" text-anchor="middle" fill="#333">黑</text>
+<rect x="320" y="40" width="18" height="60" fill="#c0392b"/>
+<text x="329" y="122" font-size="15" text-anchor="middle" fill="#333">紅</text>
+<rect x="400" y="40" width="18" height="60" fill="#c9a227"/>
+<text x="409" y="122" font-size="15" text-anchor="middle" fill="#333">金</text>
+<text x="320" y="28" font-size="15" text-anchor="middle" fill="#333">電阻（米色小圓柱，兩邊是金屬腳）</text>
+<text x="60" y="158" font-size="15" fill="#333">第 1 環 棕</text><text x="190" y="158" font-size="15" fill="#c0392b">= 1</text><text x="270" y="158" font-size="15" fill="#555">第一個數字</text>
+<text x="60" y="182" font-size="15" fill="#333">第 2 環 黑</text><text x="190" y="182" font-size="15" fill="#c0392b">= 0</text><text x="270" y="182" font-size="15" fill="#555">第二個數字</text>
+<text x="60" y="206" font-size="15" fill="#333">第 3 環 紅</text><text x="190" y="206" font-size="15" fill="#c0392b">= 2</text><text x="270" y="206" font-size="15" fill="#555">後面加 2 個 0</text>
+<text x="60" y="230" font-size="15" fill="#333">第 4 環 金</text><text x="190" y="230" font-size="15" fill="#c0392b">= ±5%</text><text x="270" y="230" font-size="15" fill="#555">誤差，可能差 5%</text>
+<text x="60" y="270" font-size="16" font-weight="bold" fill="#333">1、0，後面加兩個 0 → 1000 Ω（歐姆）＝ 1 kΩ</text>
+<text x="60" y="292" font-size="13" fill="#777">顏色口訣：黑 0、棕 1、紅 2、橙 3、黃 4、綠 5、藍 6、紫 7、灰 8、白 9</text>
+</svg>
