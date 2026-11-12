@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" font-family="sans-serif">
+<rect width="640" height="300" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">開迴路 vs 閉迴路（回授控制）</text>
+<text x="30" y="58" font-size="13" font-weight="bold" fill="#c0392b">開迴路：做了就不管</text>
+<rect x="40" y="70" width="140" height="40" rx="6" fill="#f4e1dd" stroke="#c0392b"/><text x="110" y="95" font-size="12" text-anchor="middle" fill="#333">設定：澆水 10 秒</text>
+<line x1="180" y1="90" x2="210" y2="90" stroke="#333" stroke-width="2"/>
+<rect x="210" y="70" width="140" height="40" rx="6" fill="#f4e1dd" stroke="#c0392b"/><text x="280" y="95" font-size="12" text-anchor="middle" fill="#333">控制器</text>
+<line x1="350" y1="90" x2="380" y2="90" stroke="#333" stroke-width="2"/>
+<rect x="380" y="70" width="140" height="40" rx="6" fill="#f4e1dd" stroke="#c0392b"/><text x="450" y="95" font-size="12" text-anchor="middle" fill="#333">水泵</text>
+<text x="320" y="128" font-size="11" text-anchor="middle" fill="#777">土乾不乾、水夠不夠，它都不知道</text>
+<text x="30" y="148" font-size="13" font-weight="bold" fill="#2e7d4f">閉迴路：一直量，一直修正</text>
+<rect x="30" y="160" width="128" height="40" rx="6" fill="#dff0e4" stroke="#2e7d4f"/><text x="94" y="185" font-size="12" text-anchor="middle" fill="#333">目標：濕度 40%</text>
+<line x1="158" y1="180" x2="180" y2="180" stroke="#333" stroke-width="2"/>
+<rect x="180" y="160" width="128" height="40" rx="6" fill="#dff0e4" stroke="#2e7d4f"/><text x="244" y="185" font-size="12" text-anchor="middle" fill="#333">比較：差多少？</text>
+<line x1="308" y1="180" x2="330" y2="180" stroke="#333" stroke-width="2"/>
+<rect x="330" y="160" width="128" height="40" rx="6" fill="#dff0e4" stroke="#2e7d4f"/><text x="394" y="185" font-size="12" text-anchor="middle" fill="#333">控制器</text>
+<line x1="458" y1="180" x2="480" y2="180" stroke="#333" stroke-width="2"/>
+<rect x="480" y="160" width="128" height="40" rx="6" fill="#dff0e4" stroke="#2e7d4f"/><text x="544" y="185" font-size="12" text-anchor="middle" fill="#333">水泵</text>
+<rect x="330" y="232" width="150" height="36" rx="6" fill="#cfe0ea" stroke="#6f8fa3"/><text x="405" y="255" font-size="12" text-anchor="middle" fill="#333">感測器：量現在的濕度</text>
+<path d="M544 200 L544 250 L480 250" fill="none" stroke="#2e6db0" stroke-width="2"/><path d="M330 250 L244 250 L244 200" fill="none" stroke="#2e6db0" stroke-width="2"/>
+<text x="150" y="254" font-size="11" text-anchor="middle" fill="#2e6db0">量到的結果送回來（回授）</text>
+<text x="320" y="290" font-size="12" text-anchor="middle" fill="#333">跑步也是：目標每圈 2 分鐘 → 看錶（感測器）→ 太快就放慢，太慢就加快</text>
+</svg>
