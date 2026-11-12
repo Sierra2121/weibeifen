@@ -25,15 +25,16 @@ yang:
   bio: 台北來的，在台中市場口開咖啡廳。番茄硬的切片，軟的煮醬。
 lin:
   name: 林
-  handle: lin.shorthair
+  handle: LIN.YA
   novel: feichang
   glyph: 林
   color: "#4f6d7a"
   bio: 頭髮一直都是短的。彰化念藝術系，現在在台中。
 wu:
   name: 吳
-  handle: wu.feichang
+  handle: WWW.U
   novel: feichang
+  avatar: wu.svg
   glyph: 吳
   color: "#c27c8e"
   bio: 做狗狗娃娃。不太出門，除了拍照。

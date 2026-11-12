@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="#f6e4e8"/>
+  <!-- 桌面 -->
+  <rect y="52" width="64" height="12" fill="#e8d3c3"/>
+  <!-- 身體（胖胖的） -->
+  <ellipse cx="32" cy="47" rx="17" ry="11" fill="#e6bf8f"/>
+  <ellipse cx="32" cy="50" rx="9" ry="6" fill="#f6e2c6"/>
+  <!-- 前腳 -->
+  <ellipse cx="23" cy="55" rx="4.5" ry="3" fill="#d9ad7a"/>
+  <ellipse cx="41" cy="55" rx="4.5" ry="3" fill="#d9ad7a"/>
+  <!-- 頭 -->
+  <ellipse cx="32" cy="29" rx="16" ry="14" fill="#e6bf8f"/>
+  <!-- 垂耳 -->
+  <path d="M17 22 C10 24 10 36 15 39 C18 35 19 28 20 24 Z" fill="#a8733f"/>
+  <path d="M47 22 C54 24 54 36 49 39 C46 35 45 28 44 24 Z" fill="#a8733f"/>
+  <!-- 嘴邊白毛 -->
+  <ellipse cx="32" cy="35" rx="8" ry="6" fill="#f6e2c6"/>
+  <!-- 縫線 -->
+  <path d="M32 15 L32 21" stroke="#a8733f" stroke-width="1" stroke-dasharray="1.6 1.4" stroke-linecap="round"/>
+  <path d="M22 44 Q32 41 42 44" stroke="#c99a66" stroke-width="1" fill="none" stroke-dasharray="1.6 1.4" stroke-linecap="round"/>
+  <!-- 鈕扣眼 -->
+  <circle cx="25.5" cy="29" r="2.6" fill="#3a2d2a"/>
+  <circle cx="38.5" cy="29" r="2.6" fill="#3a2d2a"/>
+  <circle cx="24.7" cy="28.2" r=".9" fill="#fff"/>
+  <circle cx="37.7" cy="28.2" r=".9" fill="#fff"/>
+  <!-- 鼻子與嘴 -->
+  <ellipse cx="32" cy="33.5" rx="2.4" ry="1.7" fill="#3a2d2a"/>
+  <path d="M29.5 36.5 Q32 38.5 34.5 36.5" stroke="#8a5a40" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+  <!-- 腮紅 -->
+  <ellipse cx="22" cy="34" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".6"/>
+  <ellipse cx="42" cy="34" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".6"/>
+  <!-- 吊牌 -->
+  <path d="M44 45 L50 48" stroke="#c27c8e" stroke-width="1"/>
+  <rect x="49" y="46" width="7" height="5" rx="1" fill="#fff" stroke="#c27c8e" stroke-width=".8"/>
+</svg>
