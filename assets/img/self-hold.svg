@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" font-family="sans-serif">
+<rect width="640" height="330" fill="#fbfaf7"/>
+<text x="320" y="26" font-size="16" font-weight="bold" text-anchor="middle" fill="#333">自保電路（按一下起動，放手馬達還是一直轉）</text>
+<line x1="40" y1="50" x2="40" y2="230" stroke="#333" stroke-width="3"/>
+<line x1="600" y1="50" x2="600" y2="230" stroke="#333" stroke-width="3"/>
+<text x="40" y="44" font-size="13" text-anchor="middle" fill="#333">電源</text>
+<text x="600" y="44" font-size="13" text-anchor="middle" fill="#333">電源</text>
+<!-- main rung -->
+<line x1="40" y1="100" x2="110" y2="100" stroke="#333" stroke-width="2"/>
+<!-- stop button NC -->
+<line x1="110" y1="100" x2="120" y2="100" stroke="#333" stroke-width="2"/><line x1="150" y1="100" x2="160" y2="100" stroke="#333" stroke-width="2"/>
+<line x1="120" y1="88" x2="120" y2="112" stroke="#c0392b" stroke-width="3"/><line x1="150" y1="88" x2="150" y2="112" stroke="#c0392b" stroke-width="3"/><line x1="116" y1="112" x2="154" y2="88" stroke="#c0392b" stroke-width="2"/>
+<text x="135" y="78" font-size="13" text-anchor="middle" fill="#c0392b">停止按鈕</text>
+<text x="135" y="132" font-size="11" text-anchor="middle" fill="#777">平常是接通的</text>
+<line x1="160" y1="100" x2="230" y2="100" stroke="#333" stroke-width="2"/>
+<!-- start button NO -->
+<line x1="230" y1="100" x2="260" y2="100" stroke="#333" stroke-width="2"/>
+<line x1="260" y1="88" x2="260" y2="112" stroke="#2e6db0" stroke-width="3"/><line x1="290" y1="88" x2="290" y2="112" stroke="#2e6db0" stroke-width="3"/>
+<line x1="290" y1="100" x2="320" y2="100" stroke="#333" stroke-width="2"/>
+<text x="275" y="78" font-size="13" text-anchor="middle" fill="#2e6db0">起動按鈕</text>
+<text x="275" y="132" font-size="11" text-anchor="middle" fill="#777">按下才接通，放手就彈開</text>
+<!-- parallel branch: MC aux contact -->
+<line x1="230" y1="100" x2="230" y2="190" stroke="#2e7d4f" stroke-width="2"/>
+<line x1="320" y1="100" x2="320" y2="190" stroke="#2e7d4f" stroke-width="2"/>
+<line x1="230" y1="190" x2="260" y2="190" stroke="#2e7d4f" stroke-width="2"/><line x1="290" y1="190" x2="320" y2="190" stroke="#2e7d4f" stroke-width="2"/>
+<line x1="260" y1="178" x2="260" y2="202" stroke="#2e7d4f" stroke-width="3"/><line x1="290" y1="178" x2="290" y2="202" stroke="#2e7d4f" stroke-width="3"/>
+<text x="275" y="224" font-size="13" text-anchor="middle" fill="#2e7d4f">接觸器自己的接點</text>
+<text x="275" y="242" font-size="11" text-anchor="middle" fill="#777">線圈有電，它就接通</text>
+<!-- coil -->
+<line x1="320" y1="100" x2="420" y2="100" stroke="#333" stroke-width="2"/>
+<circle cx="445" cy="100" r="24" fill="#fff" stroke="#333" stroke-width="2.5"/>
+<text x="445" y="105" font-size="14" text-anchor="middle" fill="#333">線圈</text>
+<text x="445" y="146" font-size="12" text-anchor="middle" fill="#555">電磁接觸器</text>
+<line x1="469" y1="100" x2="600" y2="100" stroke="#333" stroke-width="2"/>
+<!-- notes -->
+<text x="40" y="276" font-size="13" fill="#333">① 按起動 → 線圈通電，變成磁鐵 → 吸住自己的接點，綠色那條路也通了</text>
+<text x="40" y="298" font-size="13" fill="#333">② 放開起動 → 藍色那條斷了，可是電從綠色那條繼續走 → 一直通電（這就是「自保」）</text>
+<text x="40" y="320" font-size="13" fill="#333">③ 按停止 → 紅色斷開 → 線圈沒電，放開接點 → 停下來，要再按起動才會動</text>
+</svg>
