@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" font-family="sans-serif">
+<rect width="640" height="310" fill="#fbfaf7"/>
+<text x="320" y="24" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">分厘卡（測微器）長這樣</text>
+<path d="M240 120 L240 82 Q240 78 236 78 L104 78 Q100 78 100 82 L100 198 Q100 202 104 202 L236 202 Q240 202 240 198 L240 180 L270 180 L270 210 Q270 230 250 230 L90 230 Q70 230 70 210 L70 70 Q70 50 90 50 L250 50 Q270 50 270 70 L270 120 Z" fill="#6f7a82" stroke="#444" stroke-width="2"/>
+<rect x="100" y="138" width="40" height="24" fill="#c9ced3" stroke="#444" stroke-width="1.5"/>
+<rect x="170" y="138" width="100" height="24" fill="#c9ced3" stroke="#444" stroke-width="1.5"/>
+<rect x="240" y="120" width="50" height="60" fill="#6f7a82" stroke="#444" stroke-width="2"/>
+<rect x="255" y="104" width="10" height="18" fill="#c0392b" stroke="#444"/>
+<rect x="290" y="132" width="130" height="36" fill="#e4e7ea" stroke="#444" stroke-width="1.5"/>
+<line x1="290" y1="150" x2="420" y2="150" stroke="#333" stroke-width="1.2"/>
+<line x1="296" y1="150" x2="296" y2="142" stroke="#333" stroke-width="1"/>
+<line x1="306" y1="150" x2="306" y2="158" stroke="#333" stroke-width="1"/>
+<line x1="316" y1="150" x2="316" y2="142" stroke="#333" stroke-width="1"/>
+<line x1="326" y1="150" x2="326" y2="158" stroke="#333" stroke-width="1"/>
+<line x1="336" y1="150" x2="336" y2="142" stroke="#333" stroke-width="1"/>
+<line x1="346" y1="150" x2="346" y2="158" stroke="#333" stroke-width="1"/>
+<line x1="356" y1="150" x2="356" y2="142" stroke="#333" stroke-width="1"/>
+<line x1="366" y1="150" x2="366" y2="158" stroke="#333" stroke-width="1"/>
+<line x1="376" y1="150" x2="376" y2="142" stroke="#333" stroke-width="1"/>
+<line x1="386" y1="150" x2="386" y2="158" stroke="#333" stroke-width="1"/>
+<line x1="396" y1="150" x2="396" y2="142" stroke="#333" stroke-width="1"/>
+<line x1="406" y1="150" x2="406" y2="158" stroke="#333" stroke-width="1"/>
+<line x1="416" y1="150" x2="416" y2="142" stroke="#333" stroke-width="1"/>
+<path d="M420 124 L500 124 L500 176 L420 176 L410 168 L410 132 Z" fill="#cfe0ea" stroke="#444" stroke-width="1.5"/>
+<line x1="412" y1="134" x2="426" y2="134" stroke="#333" stroke-width="1"/>
+<line x1="412" y1="139" x2="420" y2="139" stroke="#333" stroke-width="1"/>
+<line x1="412" y1="144" x2="420" y2="144" stroke="#333" stroke-width="1"/>
+<line x1="412" y1="149" x2="420" y2="149" stroke="#333" stroke-width="1"/>
+<line x1="412" y1="154" x2="420" y2="154" stroke="#333" stroke-width="1"/>
+<line x1="412" y1="159" x2="426" y2="159" stroke="#333" stroke-width="1"/>
+<line x1="412" y1="164" x2="420" y2="164" stroke="#333" stroke-width="1"/>
+<line x1="412" y1="169" x2="420" y2="169" stroke="#333" stroke-width="1"/>
+<line x1="440" y1="126" x2="440" y2="174" stroke="#9fb6c4" stroke-width="1"/>
+<line x1="450" y1="126" x2="450" y2="174" stroke="#9fb6c4" stroke-width="1"/>
+<line x1="460" y1="126" x2="460" y2="174" stroke="#9fb6c4" stroke-width="1"/>
+<line x1="470" y1="126" x2="470" y2="174" stroke="#9fb6c4" stroke-width="1"/>
+<line x1="480" y1="126" x2="480" y2="174" stroke="#9fb6c4" stroke-width="1"/>
+<line x1="490" y1="126" x2="490" y2="174" stroke="#9fb6c4" stroke-width="1"/>
+<rect x="500" y="134" width="44" height="32" rx="4" fill="#9aa3aa" stroke="#444" stroke-width="1.5"/>
+<line x1="506" y1="136" x2="506" y2="164" stroke="#666" stroke-width="1"/>
+<line x1="514" y1="136" x2="514" y2="164" stroke="#666" stroke-width="1"/>
+<line x1="522" y1="136" x2="522" y2="164" stroke="#666" stroke-width="1"/>
+<line x1="530" y1="136" x2="530" y2="164" stroke="#666" stroke-width="1"/>
+<line x1="538" y1="136" x2="538" y2="164" stroke="#666" stroke-width="1"/>
+<line x1="85" y1="200" x2="60" y2="262" stroke="#999" stroke-width="1"/><text x="60" y="276" font-size="13" text-anchor="middle" fill="#333">C 形框架</text>
+<line x1="120" y1="162" x2="140" y2="262" stroke="#999" stroke-width="1"/><text x="140" y="276" font-size="13" text-anchor="middle" fill="#333">砧座（固定）</text>
+<line x1="200" y1="162" x2="230" y2="262" stroke="#999" stroke-width="1"/><text x="230" y="276" font-size="13" text-anchor="middle" fill="#333">主軸（會動）</text>
+<line x1="260" y1="104" x2="240" y2="40" stroke="#999" stroke-width="1"/><text x="240" y="36" font-size="13" text-anchor="middle" fill="#c0392b">固定鈕</text>
+<line x1="350" y1="168" x2="350" y2="262" stroke="#999" stroke-width="1"/><text x="350" y="276" font-size="13" text-anchor="middle" fill="#333">襯筒（不動，有刻度）</text>
+<line x1="460" y1="176" x2="470" y2="236" stroke="#999" stroke-width="1"/><text x="470" y="250" font-size="13" text-anchor="middle" fill="#333">套管（轉它）</text>
+<line x1="522" y1="166" x2="575" y2="262" stroke="#999" stroke-width="1"/><text x="575" y="276" font-size="13" text-anchor="middle" fill="#333">棘輪</text>
+<text x="155" y="126" font-size="11" text-anchor="middle" fill="#2e6db0">夾在這裡</text><line x1="155" y1="130" x2="155" y2="146" stroke="#2e6db0" stroke-width="1.5"/>
+<text x="320" y="302" font-size="12" text-anchor="middle" fill="#777">轉套管 → 主軸慢慢往砧座靠近；最後改捏棘輪，喀喀響就停</text>
+</svg>
