@@ -46,6 +46,9 @@
 <footer class="foot">© 畝 · 所有故事皆為虛構，若有雷同，可能是記憶出了錯。</footer>
 <script id="chars" type="application/json">{{ site.data.characters | jsonify }}</script>
 <script id="novels" type="application/json">{{ site.data.novels | jsonify }}</script>
+{%- comment -%} 兩個角色各自編章號的小說（章號會重複），選單要分角色記讀到哪 {%- endcomment -%}
+{%- capture split -%}{%- for n in site.data.novels -%}{%- assign g = site.posts | where: "novel", n[0] | group_by: "chapter" -%}{%- for x in g -%}{%- if x.size > 1 -%}{{ n[0] }},{%- break -%}{%- endif -%}{%- endfor -%}{%- endfor -%}{%- endcapture -%}
+<script>window.SPLIT = "{{ split }}".split(",");</script>
 <script>window.BASE = "{{ site.baseurl }}"; window.VER = "{{ site.time | date: '%s' }}";</script>
 <script src="{{ '/assets/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 </body>

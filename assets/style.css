@@ -265,3 +265,5 @@ html[data-theme="night"] .reading .era{background:var(--chip)}
 .thread.teaser{padding:24px 18px 14px 22px;margin-bottom:10px}
 .t-head{margin-bottom:10px}
 .thread.teaser .actions{margin-top:8px}
+.d-sub a.d-nv{padding-bottom:2px}
+.d-sub a.d-ch{padding:4px 6px 4px 22px;font-size:14px;color:#5e594f}
