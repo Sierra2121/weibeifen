@@ -51,11 +51,25 @@
     });
     box2.appendChild(cl);
     var btns = mk('div', 'nv-btns');
-    if (mine[0]) { var f = mk('a', 'nv-btn', '從第 ' + mine[0].dataset.no + ' 章開始'); f.href = mine[0].href; btns.appendChild(f); }
-    try {
-      var lr = JSON.parse(localStorage.getItem('wb:last:' + n) || 'null');
-      if (lr && lr.url) { var k = mk('a', 'nv-btn go', '繼續讀第 ' + lr.no + ' 章'); k.href = lr.url; k.appendChild(mk('small', null, lr.title)); btns.appendChild(k); }
-    } catch (e) {}
+    function rd(k) { try { var r = JSON.parse(localStorage.getItem(k) || 'null'); return r && r.url ? r : null; } catch (e) { return null; } }
+    var lr = rd('wb:last:' + n);
+    if (clash) {
+      // 兩個角色各自一條線：每個角色一個按鈕
+      if (lr && !lr.char) { // 舊紀錄沒有記角色，用章節網址找出是誰的，順便補存
+        mine.forEach(function (ch) { if (ch.pathname === lr.url) lr.char = ch.dataset.char; });
+        if (lr.char && !rd('wb:last:' + n + ':' + lr.char)) { try { localStorage.setItem('wb:last:' + n + ':' + lr.char, JSON.stringify(lr)); localStorage.setItem('wb:last:' + n, JSON.stringify(lr)); } catch (e) {} }
+      }
+      order.forEach(function (cid) {
+        if (!who2[cid]) return;
+        var nm = chars[cid].name, r = rd('wb:last:' + n + ':' + cid), b;
+        if (r) { b = mk('a', 'nv-btn go', '看到' + nm + '的第 ' + r.no + ' 章'); b.href = r.url; b.appendChild(mk('small', null, r.title)); }
+        else { var f1 = mine.filter(function (ch) { return ch.dataset.char === cid; })[0]; b = mk('a', 'nv-btn', '從' + nm + '的第 ' + f1.dataset.no + ' 章開始'); b.href = f1.href; }
+        btns.appendChild(b);
+      });
+    } else {
+      if (mine[0]) { var f = mk('a', 'nv-btn', '從第 ' + mine[0].dataset.no + ' 章開始'); f.href = mine[0].href; btns.appendChild(f); }
+      if (lr) { var k = mk('a', 'nv-btn go', '繼續讀第 ' + lr.no + ' 章'); k.href = lr.url; k.appendChild(mk('small', null, lr.title)); btns.appendChild(k); }
+    }
     box2.appendChild(btns);
     box2.appendChild(mk('h2', 'nv-h', '章節'));
     box2.hidden = false;
@@ -247,7 +261,7 @@
       // 兩個角色各自一條線：每個角色各記一行
       var rows = [];
       Object.keys(chars).forEach(function (cid) { if (chars[cid].novel !== id) return; var r = rd('wb:last:' + id + ':' + cid); if (r) rows.push([cid, r]); });
-      if (!rows.length) { var old = rd('wb:last:' + id); if (old) rows.push([old.char || '', old]); }
+      if (!rows.length) { var old = rd('wb:last:' + id); if (old) { if (old.char) rows.push([old.char, old]); else { list.push({ id: id, r: old, t: old.t || 0 }); return; } } }
       if (rows.length) list.push({ id: id, rows: rows, t: Math.max.apply(null, rows.map(function (x) { return x[1].t || 0; })) });
     } else {
       var r = rd('wb:last:' + id); if (r) list.push({ id: id, r: r, t: r.t || 0 });
