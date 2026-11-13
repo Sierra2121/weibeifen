@@ -71,6 +71,8 @@
         var k = mk('a', 'nv-btn sm go', '讀' + (nm2 ? nm2 + '的' : '') + '第 ' + lr.no + ' 章'); k.href = lr.url; btns.appendChild(k);
       }
     }
+    // 還沒讀過這部，才放「從第 1 章開始」
+    if (!btns.children.length && mine[0]) { var f0 = mk('a', 'nv-btn sm', '從第 ' + mine[0].dataset.no + ' 章開始'); f0.href = mine[0].href; btns.appendChild(f0); }
     box2.appendChild(btns);
     box2.appendChild(mk('h2', 'nv-h', '章節'));
     box2.hidden = false;
