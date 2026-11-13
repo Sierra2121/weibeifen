@@ -36,6 +36,7 @@
       cbox.appendChild(ch);
     });
     var box2 = document.getElementById('novel');
+    var bk = mk('a', 'nv-back', '← 所有小說'); bk.href = BASE + '/novels/'; box2.appendChild(bk);
     box2.append(mk('h1', null, nv.title));
     if (nv.era) box2.appendChild(mk('p', 'nv-era', nv.era));
     if (nv.tags && nv.tags.length) { var tg = mk('ul', 'nv-tags'); nv.tags.forEach(function (t) { tg.appendChild(mk('li', null, t)); }); box2.appendChild(tg); }

@@ -138,6 +138,8 @@ a.mention{color:var(--c);font-weight:700;border-bottom:1px dotted var(--c)}
 /* ===== 小說介紹頁 ===== */
 .novel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px 8px;margin-bottom:12px}
 .novel h1{margin:0;font-family:"Noto Serif TC",serif;font-weight:700;font-size:28px;letter-spacing:.06em;line-height:1.4}
+.nv-back{display:inline-block;margin:0 0 10px;font-size:14px;color:var(--sub)}
+.nv-back:hover{color:var(--ink)}
 .nv-era{margin:2px 0 10px;font-size:13px;color:var(--sub)}
 .nv-tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 14px;padding:0}
 .nv-tags li{padding:2px 12px;border-radius:999px;background:var(--chip);font-size:13px;color:#5e594f}
