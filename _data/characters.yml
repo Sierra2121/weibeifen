@@ -183,3 +183,19 @@ shi:
   glyph: 拾
   color: "#8a6a4f"
   bio: 十六歲，中興高中高一。住在中興新村的省府宿舍，筆記抄得比誰都完整。
+jian:
+  name: 澗
+  handle: jian.deadline
+  novel: chaojian
+  avatar: jian.svg
+  glyph: 澗
+  color: "#3f5a6b"
+  bio: 二十七歲，基隆人，報關員。白天跟期限打架，晚上只想安靜。已讀太久會想很多，先說抱歉。
+isle:
+  name: 嶼
+  handle: isle.figures
+  novel: chaojian
+  avatar: isle.svg
+  glyph: 嶼
+  color: "#a35a6a"
+  bio: 二十二歲，剛從倫敦回來被疫情困住，在仁愛區開了一間沒什麼人的公仔店。看心情回訊息。
