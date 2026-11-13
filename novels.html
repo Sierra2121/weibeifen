@@ -11,8 +11,10 @@ permalink: /novels/
   <a class="ov-card" href="{{ '/' | relative_url }}?n={{ n[0] }}">
     <span class="ov-icon" aria-hidden="true">{{ nv.icon | default: '📖' }}</span>
     <span class="ov-t">
-      <b>{{ nv.title }}</b>
-      <small>{{ nv.era }}{% if nv.era and nv.tag %} · {% endif %}{{ nv.tag }} · {{ cnt }} 篇</small>
+      <span class="ov-top"><b>{{ nv.title }}</b><small class="ov-n">{{ cnt }} 篇</small></span>
+      {%- if nv.era %}<small>{{ nv.era }}</small>{% endif %}
+      {%- if nv.tags %}{% assign tg = nv.tags %}{% elsif nv.tag %}{% assign tg = nv.tag | split: '・' %}{% else %}{% assign tg = nil %}{% endif %}
+      {%- if tg %}<span class="ov-tags">{% for t in tg %}<i>{{ t }}</i>{% endfor %}</span>{% endif %}
       <span>{{ nv.blurb }}</span>
     </span>
   </a>
