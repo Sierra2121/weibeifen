@@ -1,5 +1,6 @@
 # 每部小說一段。tags＝介紹頁的標籤，intro＝介紹頁的簡介。era＝時代・地點，tag＝題材（會顯示在選單書名下面）。id 用英文，貼文裡的 novel: 要對得上。icon 是側邊選單上的小圖示，可以放一個表情符號。
 yu:
+  city: taichung
   region: taichung-basin
   title: 上釉
   era: 2002–・台中
@@ -9,6 +10,7 @@ yu:
   tags: [成長, 非線性]
   intro: 在大里三合院長大的模，小時候沒有手機，現在每天跟 AI 說話。二十四歲，還是會怕，但還在找。
 market:
+  city: taichung
   region: taichung-basin
   split: true  # 兩個角色各自編章號
   title: 看天
@@ -19,6 +21,7 @@ market:
   tags: [日常, 市場, 療癒]
   intro: 「她的番茄，我挑了一年。」市場裡賣菜的芋，市場口開咖啡廳的陽。看天吃飯的人，慢慢學會看另一個人。
 feichang:
+  city: changhua
   region: changhua-plain
   split: true  # 兩個角色各自編章號
   title: 蘿蔔
@@ -29,6 +32,7 @@ feichang:
   tags: [校園, 藝術系, 七年]
   intro: 吳和林大一就在一起了。後來多了一隻從米腸山撿回來的狗，少了一頭長髮，吵了很多次架。從十八歲到二十四歲，從彰化到台中。
 gongdi:
+  city: taichung
   region: taichung-basin
   title: 共地
   era: 2023–・台中
@@ -38,6 +42,7 @@ gongdi:
   tags: [校園, 機電科, 甜]
   intro: 「我量了十次，她看一眼就裝好了。」2023 年，興大附農的川在機器人比賽遇到台中高工的萌。從那天起，川的紀錄裡多了一個人。
 hongdian:
+  city: taichung
   region: taichung-basin
   title: 紅點
   era: 2026・台中
@@ -47,6 +52,7 @@ hongdian:
   tags: [網紅, 情侶帳號, 曖昧]
   intro: 秦經營情侶帳號「秦與栩，收音中」，靠拍她和女友栩的日常累積追蹤。紅點亮著的時候，她們是大家想看的樣子。紅點關掉之後呢？
 hue:
+  city: tainan
   region: chianan-plain
   title: 忌色
   era: 2025–・台南府城
@@ -56,6 +62,7 @@ hue:
   tags: [ABO, 末日, 禮儀師]
   intro: 病毒讓 Alpha 失去嗅覺，人和人之間變得難看。台南府城的禮儀師澄看得見別人身上的顏色，卻從沒告訴過誰。直到一場八家將老師傅的喪禮，她遇見了領陣的溫硯。
 houshan:
+  city: taitung
   region: huadong-valley
   title: 後山
   era: 1980–2010・台東
@@ -65,6 +72,7 @@ houshan:
   tags: [年代, 原住民, 三十年]
   intro: 每一年都有嵐和禾的幾個故事，跟著那一天台灣發生的事。戶籍欄寫著「寄居」，她們把日子過成了家。
 exam:
+  city: taipei
   region: taipei-basin
   title: 比例原則
   era: 2025–2026・台北
@@ -74,6 +82,7 @@ exam:
   tags: [國考, 補習班, 甜]
   intro: 兩個重考生，一張自習室的桌子，一年的倒數。行政法說，手段要合乎比例。可是喜歡一個人，要怎麼剛剛好？
 yincang:
+  city: chiayi
   region: chianan-plain
   title: 隱藏
   era: 2005–2008・雲嘉
@@ -83,6 +92,7 @@ yincang:
   tags: [年代, 虐, 迴避型]
   intro: 2005 年，嘉義的網聚。很會熱場的設計師霜，遇到一個跟她一樣會熱場、也一樣會說謊的健身教練堤。說好就這樣，說好不過夜、不問家裡、不要喜歡上。她們都很會藏，直到藏不住。
 shiyi:
+  city: zhongxing
   region: taichung-basin
   title: 拾遺
   era: 2019–2022・南投
@@ -92,6 +102,7 @@ shiyi:
   tags: [校園, 歷史, 成長]
   intro: 2019 年，中興新村。108 課綱第一屆的拾，在第一堂歷史課看見簡老師盤起長髮、畫下一條時間軸。從那天起，她把每一堂課都記下來，從台灣、東亞到世界，一直記到她自己也開始寫歷史。
 chaojian:
+  city: keelung
   region: north-hills
   title: 潮間
   era: 2020–2026・基隆

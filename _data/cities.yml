@@ -1,0 +1,77 @@
+# 地圖上城市的位置（由 mapbuild 算好，不用手改）
+keelung:
+  name: 基隆
+  x: 350.8
+  y: 46.8
+  side: l
+taipei:
+  name: 台北
+  x: 320
+  y: 60.6
+  side: l
+taichung:
+  name: 台中
+  up: true
+  x: 202.7
+  y: 198.9
+  side: r
+zhongxing:
+  name: 南投中興新村
+  x: 202.7
+  y: 226.4
+  side: r
+changhua:
+  name: 彰化
+  x: 183.1
+  y: 208.1
+  side: l
+chiayi:
+  name: 嘉義
+  x: 170.6
+  y: 299.7
+  side: l
+tainan:
+  name: 台南
+  x: 135.7
+  y: 374.1
+  side: l
+taitung:
+  name: 台東
+  x: 268.3
+  y: 409
+  side: r
+yilan:
+  name: 宜蘭
+  x: 352.2
+  y: 105.3
+  side: r
+pingtung:
+  name: 屏東
+  x: 176.2
+  y: 422.6
+  side: l
+penghu:
+  name: 澎湖
+  x: 49.1
+  y: 285.9
+  side: l
+puli:
+  name: 埔里
+  x: 243.2
+  y: 224.9
+  side: l
+hualien:
+  name: 花蓮
+  x: 331.2
+  y: 223.4
+  side: r
+kaohsiung:
+  name: 高雄
+  x: 149.6
+  y: 428.7
+  side: l
+hsinchu:
+  name: 新竹
+  x: 243.2
+  y: 97.6
+  side: l
