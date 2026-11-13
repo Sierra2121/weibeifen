@@ -1,0 +1,40 @@
+# 小說總覽的分區：以濁水溪分南北、中央山脈分東西，再照自然地理的地形區分。
+# 小說在 novels.yml 裡用 region: 對應下面的 key。沒有小說的區不會顯示。
+- side: 西部・濁水溪以北
+  areas:
+    - key: north-hills
+      name: 西部丘陵與台地帶｜北部丘陵
+    - key: taipei-basin
+      name: 西部盆地帶｜臺北盆地
+    - key: taichung-basin
+      name: 西部盆地帶｜臺中盆地
+    - key: puli-basin
+      name: 西部盆地帶｜埔里盆地群
+    - key: changhua-plain
+      name: 西部沖積平原帶｜彰化平原
+- side: 西部・濁水溪以南
+  areas:
+    - key: south-hills
+      name: 西部丘陵與台地帶｜中南部丘陵
+    - key: chianan-plain
+      name: 西部沖積平原帶｜嘉南平原
+    - key: pingtung-plain
+      name: 西部沖積平原帶｜屏東平原
+- side: 中央山地帶
+  areas:
+    - key: mountains
+      name: 中央山地帶｜五大山脈
+- side: 東部
+  areas:
+    - key: yilan-plain
+      name: 東部縱谷與平原帶｜宜蘭平原
+    - key: huadong-valley
+      name: 東部縱谷與平原帶｜花東縱谷
+- side: 離島
+  areas:
+    - key: volcanic-isles
+      name: 離島｜火山島
+    - key: coral-isles
+      name: 離島｜珊瑚礁島
+    - key: continental-isles
+      name: 離島｜大陸島

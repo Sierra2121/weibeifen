@@ -4,9 +4,13 @@ title: 小說
 permalink: /novels/
 ---
 <h1 class="ov-h">小說</h1>
-<div class="ov-list">
+{%- for rg in site.data.regions -%}
+{%- capture side_html -%}
+{%- for ar in rg.areas -%}
+{%- capture area_html -%}
 {%- for n in site.data.novels -%}
 {%- assign nv = n[1] -%}
+{%- if nv.region == ar.key -%}
 {%- assign cnt = 0 -%}{%- for p in site.posts -%}{%- if p.novel == n[0] -%}{%- assign cnt = cnt | plus: 1 -%}{%- endif -%}{%- endfor -%}
   <a class="ov-card" href="{{ '/' | relative_url }}?n={{ n[0] }}">
     <span class="ov-icon" aria-hidden="true">{{ nv.icon | default: '📖' }}</span>
@@ -18,5 +22,21 @@ permalink: /novels/
       <span>{{ nv.blurb }}</span>
     </span>
   </a>
+{%- endif -%}
 {%- endfor -%}
-</div>
+{%- endcapture -%}
+{%- assign area_t = area_html | strip -%}
+{%- if area_t != "" %}
+<h3 class="rg-area">{{ ar.name }}</h3>
+<div class="ov-list">{{ area_html }}</div>
+{%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- assign side_t = side_html | strip -%}
+{%- if side_t != "" %}
+<section class="rg">
+<h2 class="rg-side">{{ rg.side }}</h2>
+{{ side_html }}
+</section>
+{%- endif -%}
+{%- endfor -%}

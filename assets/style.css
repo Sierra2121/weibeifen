@@ -275,3 +275,7 @@ html[data-theme="night"] .reading .era{background:var(--chip)}
 .nv-h{margin:22px 4px 10px}
 .ov-t{flex:1}
 .ov-card{padding:22px 40px 22px 22px}
+/* 小說總覽：地理分區 */
+.rg{margin-bottom:28px}
+.rg-side{margin:26px 0 4px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:20px;letter-spacing:.08em}
+.rg-area{margin:14px 2px 8px;font-size:13px;font-weight:500;color:var(--sub);letter-spacing:.1em}
