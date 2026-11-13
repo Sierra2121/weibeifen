@@ -39,7 +39,6 @@
     box2.append(mk('h1', null, nv.title));
     if (nv.era) box2.appendChild(mk('p', 'nv-era', nv.era));
     if (nv.tags && nv.tags.length) { var tg = mk('ul', 'nv-tags'); nv.tags.forEach(function (t) { tg.appendChild(mk('li', null, t)); }); box2.appendChild(tg); }
-    if (nv.blurb) box2.appendChild(mk('p', 'nv-blurb', nv.blurb));
     if (nv.intro) box2.appendChild(mk('p', 'nv-intro', nv.intro));
     var cl = mk('div', 'nv-chars');
     order.forEach(function (id) {
