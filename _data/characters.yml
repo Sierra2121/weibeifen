@@ -25,6 +25,7 @@ yang:
   name: 陽
   handle: yang.coffee
   novel: market
+  avatar: yang.svg
   glyph: "365"
   color: "#d98a2b"
   bio: 台北來的，在台中市場口開咖啡廳。番茄硬的切片，軟的煮醬。
@@ -64,8 +65,9 @@ cheng:
   name: 澄
   handle: cheng.tenseconds
   novel: hue
+  avatar: cheng.svg
   glyph: 澄
-  color: "#5c7a78"
+  color: "#8b5e6b"
   bio: 二十五歲，在城西境的禮儀社工作。看得到別人身上的顏色，看不到自己的。
 lan:
   name: 嵐

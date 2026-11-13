@@ -5,9 +5,62 @@
   var n = q.get('n') || '', c = q.get('c') || '';
   var chars = JSON.parse(document.getElementById('chars').textContent || '{}');
   var who = chars[c];
+  var novels = JSON.parse(document.getElementById('novels').textContent || '{}');
+  var nv = !who && n && !q.get('liked') && !q.get('reposted') ? novels[n] : null;
   var shown = 0;
+  function mk(tag, cls, txt) { var e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; }
 
-  if (who) {
+  if (nv) {
+    // 小說介紹頁：簡介、標籤、角色、章節目錄
+    feed.hidden = true;
+    var cbox = document.querySelector('.chapters');
+    cbox.hidden = false;
+    var order = Object.keys(chars);
+    var mine = Array.prototype.slice.call(cbox.querySelectorAll('.chapter')).filter(function (ch) { return ch.dataset.novel === n; });
+    var seen = {}, clash = false;
+    mine.forEach(function (ch) { if (seen[ch.dataset.no]) clash = true; seen[ch.dataset.no] = 1; });
+    // 章節編號有重複（例如看天的芋跟陽的番外），就按角色分開排
+    mine.sort(function (a, b) {
+      if (clash && a.dataset.char !== b.dataset.char) return order.indexOf(a.dataset.char) - order.indexOf(b.dataset.char);
+      return (+a.dataset.no || 0) - (+b.dataset.no || 0);
+    });
+    cbox.querySelectorAll('.chapter').forEach(function (ch) { ch.hidden = true; });
+    var who2 = {}; mine.forEach(function (ch) { who2[ch.dataset.char] = 1; });
+    var many = Object.keys(who2).length > 1, last = null;
+    mine.forEach(function (ch) {
+      if (clash && ch.dataset.char !== last) cbox.appendChild(mk('p', 'grp', (chars[ch.dataset.char] || {}).name + '的貼文'));
+      last = ch.dataset.char;
+      ch.hidden = false; shown++;
+      ch.querySelector('.ch-no').textContent = '第 ' + ch.dataset.no + ' 章';
+      if (many && !clash) { var t = ch.querySelector('.ch-title'); if (!t.querySelector('small')) t.appendChild(mk('small', 'ch-who', (chars[ch.dataset.char] || {}).name)); }
+      cbox.appendChild(ch);
+    });
+    var box2 = document.getElementById('novel');
+    box2.append(mk('h1', null, nv.title));
+    if (nv.era) box2.appendChild(mk('p', 'nv-era', nv.era));
+    if (nv.tags && nv.tags.length) { var tg = mk('ul', 'nv-tags'); nv.tags.forEach(function (t) { tg.appendChild(mk('li', null, t)); }); box2.appendChild(tg); }
+    if (nv.blurb) box2.appendChild(mk('p', 'nv-blurb', nv.blurb));
+    if (nv.intro) box2.appendChild(mk('p', 'nv-intro', nv.intro));
+    var cl = mk('div', 'nv-chars');
+    order.forEach(function (id) {
+      var ch = chars[id]; if (ch.novel !== n) return;
+      var a = mk('a', 'nv-char'); a.href = BASE + '/?c=' + id;
+      var av = mk('span', 'avatar'); av.style.setProperty('--c', ch.color || '#999');
+      if (ch.avatar) { var im = new Image(); im.src = BASE + '/assets/avatars/' + ch.avatar + '?v=' + (window.VER || ''); im.alt = ''; av.appendChild(im); } else av.textContent = ch.glyph || ch.name;
+      a.append(av, mk('span', null, ch.name)); cl.appendChild(a);
+    });
+    box2.appendChild(cl);
+    var btns = mk('div', 'nv-btns');
+    if (mine[0]) { var f = mk('a', 'nv-btn', '從第 ' + mine[0].dataset.no + ' 章開始'); f.href = mine[0].href; btns.appendChild(f); }
+    try {
+      var lr = JSON.parse(localStorage.getItem('wb:last:' + n) || 'null');
+      if (lr && lr.url) { var k = mk('a', 'nv-btn go', '繼續讀第 ' + lr.no + ' 章'); k.href = lr.url; k.appendChild(mk('small', null, lr.title)); btns.appendChild(k); }
+    } catch (e) {}
+    box2.appendChild(btns);
+    box2.appendChild(mk('h2', 'nv-h', '章節'));
+    box2.hidden = false;
+    document.title = nv.title + '｜未備份';
+  } else if (who) {
     // 個人頁：顯示這個角色的完整章節，從第一章排起
     feed.hidden = true;
     var box = document.querySelector('.chapters');
@@ -73,11 +126,16 @@
     // 動態牆：每章一則重點（也可篩選小說、已說讚、已轉發）
     var liked = q.get('liked'), rp = q.get('reposted');
     function has(k) { try { return JSON.parse(localStorage.getItem('wb:' + k)) === true; } catch (e) { return false; } }
+    var hits = [];
     feed.querySelectorAll('.teaser').forEach(function (t) {
       var key = t.querySelector('.actions').dataset.key;
       var ok = (!n || t.dataset.novel === n) && (!liked || has('like:' + key)) && (!rp || has('rp:' + key));
-      t.hidden = !ok; if (ok) shown++;
+      t.hidden = true; if (ok) { shown++; hits.push(t); }
     });
+    // 一次先放 15 則，按「載入更多」再放 15 則
+    var PAGE = 15, upto = 0, more = document.querySelector('.more-btn');
+    function step() { hits.slice(upto, upto + PAGE).forEach(function (t) { t.hidden = false; }); upto += PAGE; more.hidden = upto >= hits.length; }
+    more.onclick = step; step();
   }
   document.querySelector('.empty').hidden = shown > 0;
 })();
@@ -150,4 +208,20 @@
       }
     }
   });
+})();
+
+// 閱讀頁：字級、夜間模式、記住讀到哪
+(function () {
+  var sec = document.querySelector('.chapter.read');
+  var d = document.documentElement;
+  function save(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  var bs = document.querySelectorAll('.fs button');
+  bs.forEach(function (b) {
+    b.setAttribute('aria-pressed', d.dataset.fs === b.dataset.fs);
+    b.onclick = function () { d.dataset.fs = b.dataset.fs; save('wb:fs', b.dataset.fs); bs.forEach(function (x) { x.setAttribute('aria-pressed', x === b); }); };
+  });
+  var tb = document.querySelector('.theme-btn');
+  function lab() { tb.setAttribute('aria-label', d.dataset.theme === 'night' ? '切換白天模式' : '切換夜間模式'); }
+  if (tb) { tb.onclick = function () { d.dataset.theme = d.dataset.theme === 'night' ? 'day' : 'night'; save('wb:theme', d.dataset.theme); lab(); }; lab(); }
+  if (sec && sec.dataset.novel) save('wb:last:' + sec.dataset.novel, JSON.stringify({ url: location.pathname, no: sec.dataset.no, title: sec.dataset.title }));
 })();

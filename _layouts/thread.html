@@ -1,10 +1,26 @@
 ---
 layout: default
+body_class: reading
 ---
-<a class="back" href="{{ '/' | relative_url }}?c={{ page.character }}">← 回到{{ site.data.characters[page.character].name }}的頁面</a>
 {%- assign me = site.data.characters[page.character] -%}
-<section class="chapter read" data-char="{{ page.character }}" data-novel="{{ page.novel }}" style="--c:{{ me.color }}">
-  <h2>{{ page.title }}</h2>
+{%- assign nv = site.data.novels[page.novel] -%}
+{%- comment -%} 上一章、下一章：先找同一個角色的前後章，找不到再找同一本小說的（後山這種兩個人輪流寫的） {%- endcomment -%}
+{%- assign want_n = page.chapter | plus: 1 -%}
+{%- assign want_p = page.chapter | minus: 1 -%}
+{%- assign nx = nil -%}{%- assign pv = nil -%}
+{%- for p in site.posts -%}{%- if p.novel == page.novel and p.character == page.character -%}
+  {%- if p.chapter == want_n -%}{%- assign nx = p -%}{%- endif -%}
+  {%- if p.chapter == want_p -%}{%- assign pv = p -%}{%- endif -%}
+{%- endif -%}{%- endfor -%}
+{%- unless nx -%}{%- for p in site.posts -%}{%- if p.novel == page.novel and p.chapter == want_n -%}{%- assign nx = p -%}{%- endif -%}{%- endfor -%}{%- endunless -%}
+{%- unless pv -%}{%- for p in site.posts -%}{%- if p.novel == page.novel and p.chapter == want_p -%}{%- assign pv = p -%}{%- endif -%}{%- endfor -%}{%- endunless -%}
+<article class="chapter read" data-char="{{ page.character }}" data-novel="{{ page.novel }}" data-no="{{ page.chapter }}" data-title="{{ page.title | escape }}" style="--c:{{ me.color }}">
+  <p class="r-crumb"><a href="{{ '/' | relative_url }}?n={{ page.novel }}">《{{ nv.title }}》</a>{% if page.chapter %}　·　第 {{ page.chapter }} 章{% endif %}</p>
+  <a class="r-who" href="{{ '/' | relative_url }}?c={{ page.character }}">
+    <span class="avatar" style="--c:{{ me.color }}">{%- if me.avatar -%}<img src="{{ '/assets/avatars/' | append: me.avatar | relative_url }}?v={{ site.time | date: '%s' }}" alt="">{%- else -%}{{ me.glyph }}{%- endif -%}</span>
+    <span class="r-who-t"><b>{{ me.handle }}</b><small>{{ page.date | date: "%Y 年 %-m 月 %-d 日" }}</small></span>
+  </a>
+  <h1>{{ page.title }}</h1>
   {%- if me.eras -%}
   {%- assign y = page.date | date: "%Y" | plus: 0 -%}
   {%- assign era = nil -%}
@@ -14,13 +30,14 @@ layout: default
   {%- endif -%}
   {%- endif %}
   <div class="ch-text">{{ content }}</div>
-  {%- assign want = page.chapter | plus: 1 -%}
-  {%- assign nx = nil -%}
-  {%- for p in site.posts -%}{%- if p.character == page.character and p.novel == page.novel and p.chapter == want -%}{%- assign nx = p -%}{%- endif -%}{%- endfor -%}
-  {%- if nx -%}
-  <a class="next-ch" href="{{ nx.url | relative_url }}"><span class="nc-label">下一章</span><span class="nc-title">{{ nx.title }}</span><span class="nc-go" aria-hidden="true">›</span></a>
-  {%- else -%}
-  <a class="next-ch end" href="{{ '/' | relative_url }}?c={{ page.character }}"><span class="nc-label">這是目前最後一章</span><span class="nc-title">回到目錄</span><span class="nc-go" aria-hidden="true">›</span></a>
-  {%- endif %}
+  <div class="r-end" aria-hidden="true"><span></span><span></span><span></span></div>
   {% capture u %}{{ page.url | relative_url }}{% endcapture %}{% include actions.html key=page.slug url=u %}
-</section>
+  <nav class="r-nav" aria-label="換章">
+    {%- if pv -%}<a class="r-prev" href="{{ pv.url | relative_url }}"><small>← 上一章</small><span>{{ pv.title }}</span></a>{%- else -%}<span class="r-prev off"><small>← 上一章</small><span>這是第一章</span></span>{%- endif -%}
+    {%- if nx -%}<a class="r-next" href="{{ nx.url | relative_url }}"><small>下一章 →</small><span>{{ nx.title }}</span></a>{%- else -%}<span class="r-next off"><small>下一章 →</small><span>目前最後一章</span></span>{%- endif -%}
+  </nav>
+</article>
+<nav class="r-bar" aria-label="換章">
+  {%- if pv -%}<a href="{{ pv.url | relative_url }}">← 上一章</a>{%- else -%}<span class="off">← 上一章</span>{%- endif -%}
+  {%- if nx -%}<a class="go" href="{{ nx.url | relative_url }}">下一章 →</a>{%- else -%}<span class="off">下一章 →</span>{%- endif -%}
+</nav>

@@ -4,7 +4,7 @@
   <path d="M12 34 C10 16 22 8 32 8 C42 8 54 16 52 34 L52 50 C46 54 18 54 12 50 Z" fill="#3b2f2f"/>
   <!-- 脖子與衣服 -->
   <rect x="27" y="46" width="10" height="8" fill="#f6dccb"/>
-  <path d="M10 64 C12 54 20 51 32 51 C44 51 52 54 54 64 Z" fill="#8a9a6b"/>
+  <path d="M10 64 C12 54 20 51 32 51 C44 51 52 54 54 64 Z" fill="#9a896b"/>
   <path d="M24 64 L24 55 L40 55 L40 64 Z" fill="#efe6d4"/>
   <!-- 臉 -->
   <ellipse cx="32" cy="33" rx="15" ry="16" fill="#f8e2d2"/>

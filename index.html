@@ -1,12 +1,14 @@
 ---
 layout: default
 ---
+<section id="novel" class="novel" hidden></section>
 <section id="profile" class="profile" hidden></section>
 <div class="feed">
 {%- for post in site.posts -%}
   {% include teaser.html post=post %}
 {%- endfor -%}
 </div>
+<button type="button" class="more-btn" hidden>載入更多</button>
 <div class="chapters" hidden>
 {%- assign ordered = site.posts | reverse -%}
 {%- for post in ordered -%}

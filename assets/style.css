@@ -134,3 +134,84 @@ a.mention{color:var(--c);font-weight:700;border-bottom:1px dotted var(--c)}
 .items em{font-style:normal;font-size:12px;color:var(--c)}
 .d-book{display:flex;flex-direction:column;line-height:1.3}
 .d-book .d-tags{margin:2px 0 0;font-size:12px;color:var(--sub);font-weight:400}
+
+/* ===== 小說介紹頁 ===== */
+.novel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px 8px;margin-bottom:12px}
+.novel h1{margin:0;font-family:"Noto Serif TC",serif;font-weight:700;font-size:28px;letter-spacing:.06em;line-height:1.4}
+.nv-era{margin:2px 0 10px;font-size:13px;color:var(--sub)}
+.nv-tags{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0 0 14px;padding:0}
+.nv-tags li{padding:2px 12px;border-radius:999px;background:var(--chip);font-size:13px;color:#5e594f}
+.nv-blurb{margin:0 0 .6em;font-family:"Noto Serif TC",serif;font-size:17px;line-height:1.8}
+.nv-intro{margin:0 0 1em;font-size:15px;line-height:1.9;color:#4a463f}
+.nv-chars{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 16px}
+.nv-char{display:flex;align-items:center;gap:8px;font-size:15px;font-weight:500}
+.nv-btns{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.nv-btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border:1px solid var(--line);border-radius:999px;font-size:15px;background:var(--card)}
+.nv-btn:hover{border-color:var(--ink)}
+.nv-btn.go{background:var(--ink);border-color:var(--ink);color:#fff}
+.nv-btn small{font-size:12px;opacity:.75}
+.nv-h{margin:6px 0 10px;font-size:13px;font-weight:500;color:var(--sub);letter-spacing:.2em}
+.chapters .grp{margin:0;padding:10px 20px;background:var(--chip);font-size:13px;color:var(--sub);letter-spacing:.1em}
+.ch-who{margin-left:10px;font-family:"Noto Sans TC",sans-serif;font-size:12px;color:var(--sub)}
+.more-btn{display:block;margin:8px auto 0;min-height:48px;padding:0 32px;border:1px solid var(--line);border-radius:999px;background:var(--card);color:var(--ink);font:inherit;font-size:15px;cursor:pointer}
+.more-btn:hover{border-color:var(--ink)}
+
+/* ===== 閱讀頁 ===== */
+body.reading{--bg:#faf7f0;--card:#faf7f0;--ink:#2b2a27;--sub:#6b665c;--line:#e6e0d4;--chip:#f1ece2}
+html[data-theme="night"] body.reading{--bg:#1c1b19;--card:#1c1b19;--ink:#dad5cb;--sub:#9a948a;--line:#2e2c29;--chip:#2a2926}
+body.reading .top{background:var(--bg)}
+body.reading .drawer{background:var(--bg)}
+body.reading .bar,body.reading .wrap,body.reading .foot{max-width:672px}
+.r-tools{display:flex;align-items:center;gap:8px;margin-left:auto}
+.fs{display:flex;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.fs button{min-width:40px;height:36px;border:0;background:none;color:var(--sub);font:inherit;font-size:14px;cursor:pointer}
+.fs button[data-fs="s"]{font-size:13px}.fs button[data-fs="l"]{font-size:16px}
+.fs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.theme-btn{display:grid;place-items:center;width:40px;height:40px;border:1px solid var(--line);border-radius:50%;background:none;color:var(--sub);cursor:pointer}
+.theme-btn .sun{display:none}
+html[data-theme="night"] .theme-btn .sun{display:block}
+html[data-theme="night"] .theme-btn .moon{display:none}
+.chapter.read{background:none;border:0;border-radius:0;padding:36px 0 0;margin:0}
+.r-crumb{margin:0 0 18px;font-size:14px;color:var(--sub);letter-spacing:.04em}
+.r-crumb a{color:var(--c);font-weight:500}
+.r-who{display:inline-flex;align-items:center;gap:12px;margin-bottom:22px}
+.r-who-t{display:flex;flex-direction:column;line-height:1.4}
+.r-who-t b{font-size:15px;font-weight:500}
+.r-who-t small{font-size:13px;color:var(--sub)}
+.chapter.read h1{margin:0 0 1.2em;font-family:"Noto Serif TC",serif;font-weight:700;font-size:30px;line-height:1.5;letter-spacing:.04em}
+.chapter.read .era{color:var(--sub)}
+.chapter.read .ch-text{font-family:"Noto Serif TC",serif;font-size:18px;line-height:1.95;letter-spacing:.03em;text-align:justify}
+html[data-fs="s"] .chapter.read .ch-text{font-size:16px}
+html[data-fs="l"] .chapter.read .ch-text{font-size:20px}
+.chapter.read .ch-text p{margin:0 0 1.3em}
+.r-end{display:flex;justify-content:center;gap:10px;margin:48px 0 28px}
+.r-end span{width:5px;height:5px;border-radius:50%;background:var(--line)}
+.chapter.read .actions{border-top:0;margin:0 0 20px;justify-content:center}
+.r-nav{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.r-nav a,.r-nav .off{display:flex;flex-direction:column;gap:4px;padding:14px 18px;border:1px solid var(--line);border-radius:12px;min-width:0}
+.r-nav small{font-size:13px;color:var(--sub)}
+.r-nav a span,.r-nav .off span{font-family:"Noto Serif TC",serif;font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.r-nav .r-next{text-align:right}
+.r-nav a.r-next{background:var(--c);border-color:var(--c);color:#fff}
+.r-nav a.r-next small{color:#fff;opacity:.85}
+html[data-theme="night"] .r-nav a.r-next{background:var(--chip);border-color:var(--chip);color:var(--ink)}
+html[data-theme="night"] .r-nav a.r-next small{color:var(--ink);opacity:.8}
+.r-nav .off{opacity:.45}
+.r-nav a:hover{border-color:var(--ink)}
+.r-bar{display:none}
+html[data-theme="night"] .r-crumb a,html[data-theme="night"] .reading a.mention,html[data-theme="night"] .reading .era a{filter:brightness(1.7)}
+html[data-theme="night"] .reading .era{background:var(--chip)}
+@media (max-width:700px){
+  .chapter.read{padding-top:24px}
+  .chapter.read h1{font-size:25px}
+  .chapter.read .ch-text{font-size:17px}
+  html[data-fs="s"] .chapter.read .ch-text{font-size:15px}
+  html[data-fs="l"] .chapter.read .ch-text{font-size:19px}
+  body.reading{padding-bottom:64px}
+  .r-bar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:6;height:56px;background:var(--bg);border-top:1px solid var(--line)}
+  .r-bar a,.r-bar span{display:flex;align-items:center;justify-content:center;font-size:15px}
+  .r-bar > :first-child{border-right:1px solid var(--line)}
+  .r-bar .go{color:var(--ink);font-weight:500}
+  .r-bar .off{color:var(--sub);opacity:.5}
+  .fs button{min-width:36px}
+}

@@ -4,8 +4,8 @@
   <circle cx="45" cy="17" r="6" fill="#f3e3c3"/>
   <path d="M0 36 C8 26 16 24 24 30 C30 22 40 20 50 28 C56 24 61 25 64 28 L64 44 L0 44 Z" fill="#8fa7b0"/>
   <path d="M0 42 C10 34 22 34 32 39 C42 33 54 33 64 38 L64 50 L0 50 Z" fill="#6c8a93"/>
-  <rect y="48" width="64" height="16" fill="#9eb08a"/>
-  <path d="M0 52 L64 52 M0 57 L64 57" stroke="#8a9c76" stroke-width="1"/>
+  <rect y="48" width="64" height="16" fill="#b0a28a"/>
+  <path d="M0 52 L64 52 M0 57 L64 57" stroke="#9c8e76" stroke-width="1"/>
   <rect x="11" y="24" width="1.6" height="26" fill="#4f6d7a"/>
   <path d="M6 28 L17 28" stroke="#4f6d7a" stroke-width="1.2"/>
   <path d="M7 28 C22 34 36 34 64 30" stroke="#4f6d7a" stroke-width=".7" fill="none"/>
