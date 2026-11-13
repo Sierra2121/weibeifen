@@ -159,3 +159,19 @@ tu:
   glyph: 荼
   color: "#b5653a"
   bio: 二十七歲，屏東潮州人，第三次考高考法制。住南陽街附近的四坪雅房，一天一百五。很會編順口溜。
+shuang:
+  name: 霜
+  handle: frostline
+  novel: yincang
+  avatar: shuang.svg
+  glyph: 霜
+  color: "#7d8fa3"
+  bio: 二十四歲，嘉義市人，雲科大設計系畢業，在廣告社畫招牌。PTT 帳號 frostline，網聚永遠帶骰子。
+di:
+  name: 堤
+  handle: di.beigang
+  novel: yincang
+  avatar: di.svg
+  glyph: 堤
+  color: "#4b5260"
+  bio: 二十七歲，雲林北港人，健身教練，一七六。騎一台黑色 KTR。菸戒了，手上還是要拿一根。
