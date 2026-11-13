@@ -1,15 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" fill="#e6eaef"/>
-  <!-- 後髮（俐落短髮） -->
-  <path d="M17 33 C15 17 24 10 32 10 C41 10 50 17 47 33 L46 38 C40 40 24 40 18 38 Z" fill="#221e1c"/>
   <!-- 脖子與衣服：黑外套白襯衫 -->
   <rect x="28" y="44" width="8" height="9" fill="#f7e7de"/>
   <path d="M12 64 C14 54 21 51 32 51 C43 51 50 54 52 64 Z" fill="#1f2226"/>
   <path d="M26 51 L32 59 L38 51 L36 64 L28 64 Z" fill="#f7f6f2"/>
   <!-- 臉（偏瘦長、冷白） -->
   <ellipse cx="32" cy="32" rx="12.5" ry="15" fill="#f7e7de"/>
-  <!-- 側分瀏海 -->
-  <path d="M19 30 C18 18 26 13 33 13 C41 13 47 19 45 28 C41 22 35 20 28 21 C24 23 21 26 19 30 Z" fill="#221e1c"/>
+  <!-- 很短的短髮，比堤長一點點，前面稍微側分 -->
+  <path d="M18.5 30 C17 15 25 9 32 9 C40 9 47.5 15 45.5 30 C44.5 24 42 20.5 37 19.5 C33 21 26 21.5 21.5 22.5 C20 24.5 19 27 18.5 30 Z" fill="#221e1c"/>
   <!-- 細眉 -->
   <path d="M23 28.5 Q26 27.3 29 28.2" stroke="#221e1c" stroke-width="0.9" fill="none" stroke-linecap="round"/>
   <path d="M35 28.2 Q38 27.3 41 28.5" stroke="#221e1c" stroke-width="0.9" fill="none" stroke-linecap="round"/>
