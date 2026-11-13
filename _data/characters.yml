@@ -143,3 +143,19 @@ he:
     - name: 紅包上的「陳」
       note: 嵐的爸爸用左手寫的。筆畫很多，他寫了很久。
       ch: 53
+xi:
+  name: 晞
+  handle: xi.fourcolors
+  novel: exam
+  avatar: xi.svg
+  glyph: 晞
+  color: "#5b6b8c"
+  bio: 二十四歲，政大公行，第二次考高考一般行政。差 1.80 分。螢光筆分四色，每天第一個到自習室。
+tu:
+  name: 荼
+  handle: tu.koujue
+  novel: exam
+  avatar: tu.svg
+  glyph: 荼
+  color: "#b5653a"
+  bio: 二十七歲，屏東潮州人，第三次考高考法制。住南陽街附近的四坪雅房，一天一百五。很會編順口溜。
