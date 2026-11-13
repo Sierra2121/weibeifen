@@ -301,7 +301,7 @@
   regions.forEach(function (s) { (s.areas || []).forEach(function (a) { names[a.key] = a.name; }); });
   function color(id) { for (var k in chars) if (chars[k].novel === id) return chars[k].color; return '#6b665c'; }
   function list(key) { return Object.keys(novels).filter(function (id) { return novels[id].region === key; }); }
-  var cur = null;
+  var cur = null, pinned = null;
   function show(key) {
     if (key === cur) return; cur = key;
     wrap.querySelectorAll('.tw-rg').forEach(function (r) { r.classList.toggle('on', r.dataset.rg === key); });
@@ -318,7 +318,11 @@
   }
   wrap.querySelectorAll('.tw-rg').forEach(function (r) {
     if (list(r.dataset.rg).length) r.classList.add('has');
-    r.addEventListener('mouseenter', function () { show(r.dataset.rg); });
-    r.addEventListener('click', function () { show(r.dataset.rg); });
+    // 還沒點選時，滑過去先預覽；點了就固定，滑到別區也不會換
+    r.addEventListener('mouseenter', function () { if (!pinned) show(r.dataset.rg); });
+    r.addEventListener('click', function () {
+      pinned = r.dataset.rg; cur = null; show(pinned);
+      wrap.querySelectorAll('.tw-rg').forEach(function (x) { x.classList.toggle('pin', x.dataset.rg === pinned); });
+    });
   });
 })();
