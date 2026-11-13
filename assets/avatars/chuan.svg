@@ -1,11 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#dbe7ee"/>
-  <rect width="64" height="30" fill="#c6dbe6"/>
-  <circle cx="14" cy="12" r="5" fill="#f2e2bd"/>
-  <path d="M0 30 C10 22 20 21 30 27 C38 20 50 19 64 26 L64 36 L0 36 Z" fill="#8aa3ae"/>
-  <path d="M0 34 L64 34 L64 64 L0 64 Z" fill="#b7a88e"/>
-  <path d="M26 34 C30 40 22 46 26 52 C30 58 20 62 18 64 L46 64 C40 60 46 55 42 50 C38 44 46 40 38 34 Z" fill="#5f8fab"/>
-  <path d="M30 38 C33 42 27 46 30 51 M36 44 C39 48 34 53 37 58" stroke="#cfe3ee" stroke-width="1" fill="none" stroke-linecap="round"/>
-  <path d="M8 40 L8 48 M8 40 C5 43 5 45 8 46 M8 40 C11 43 11 45 8 46" stroke="#736650" stroke-width="1" fill="#958466"/>
-  <path d="M54 44 L54 52 M54 44 C51 47 51 49 54 50 M54 44 C57 47 57 49 54 50" stroke="#736650" stroke-width="1" fill="#958466"/>
+<!-- 川：皮膚黑、長髮綁低馬尾、看起來兇、機電科工作服 -->
+<rect width="64" height="64" fill="#dce4e9"/>
+<path d="M15.5 31 C14 14 23 8.5 32 8.5 C41 8.5 50 14 48.5 31 Z" fill="#1c1715"/>
+<rect x="27" y="45" width="10" height="9" fill="#bf8a62"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#34506b"/><path d="M24 51 L32 56 L29 59 L22 53 Z M40 51 L32 56 L35 59 L42 53 Z" fill="#294055"/><path d="M32 56 L32 64" stroke="#c9ccd2" stroke-width="1"/><rect x="40" y="58" width="6" height="2.6" rx=".6" fill="#e5b84a"/>
+<path d="M44 40 C50 44 51 52 47 61 C45 56 43 50 41 46 Z" fill="#1c1715"/>
+<ellipse cx="17.3" cy="35" rx="2.4" ry="3.4" fill="#bf8a62"/><ellipse cx="46.7" cy="35" rx="2.4" ry="3.4" fill="#bf8a62"/>
+<ellipse cx="32" cy="33" rx="14.5" ry="16" fill="#bf8a62"/>
+<ellipse cx="25.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="25.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="24.4" cy="32.3" r="1.1" fill="#fff"/><ellipse cx="38.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="38.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="37.4" cy="32.3" r="1.1" fill="#fff"/>
+<path d="M21.5 28.5 L29 30" stroke="#2a2220" stroke-width="1.4" stroke-linecap="round"/><path d="M42.5 28.5 L35 30" stroke="#2a2220" stroke-width="1.4" stroke-linecap="round"/>
+<path d="M29.8 42.6 L34.2 42.6" stroke="#8a5a52" stroke-width="1.1" stroke-linecap="round"/>
+<path d="M16 32 C15 17 24 11 32 11 C40 11 49 17 48 32 C46.5 22.5 40 18 32 17.5 C24 18 17.5 22.5 16 32 Z" fill="#1c1715"/>
 </svg>

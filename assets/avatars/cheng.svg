@@ -1,12 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#efe4e6"/>
-  <rect y="46" width="64" height="18" fill="#d8c3c7"/>
-  <circle cx="14" cy="14" r="5" fill="#f6e1b5"/>
-  <path d="M32 18 C28 26 28 34 32 42 C36 34 36 26 32 18 Z" fill="#f2c94c" stroke="#b8862a" stroke-width=".8"/>
-  <path d="M32 42 C24 38 20 30 21 24 C27 27 30 34 32 42 Z" fill="#f5d77a" stroke="#b8862a" stroke-width=".8"/>
-  <path d="M32 42 C40 38 44 30 43 24 C37 27 34 34 32 42 Z" fill="#f5d77a" stroke="#b8862a" stroke-width=".8"/>
-  <path d="M32 42 C22 43 15 39 13 34 C20 33 27 37 32 42 Z" fill="#f8e3a3" stroke="#b8862a" stroke-width=".8"/>
-  <path d="M32 42 C42 43 49 39 51 34 C44 33 37 37 32 42 Z" fill="#f8e3a3" stroke="#b8862a" stroke-width=".8"/>
-  <path d="M18 46 h28" stroke="#8b5e6b" stroke-width="1.6" stroke-linecap="round"/>
-  <path d="M48 20 c3 2 5 1 7 -1 M46 27 c4 2 7 1 9 -2" fill="none" stroke="#8b5e6b" stroke-width=".9" stroke-linecap="round" opacity=".7"/>
+<!-- 澄：禮儀師、短髮整齊、黑西裝、背後是看得到的費洛蒙顏色 -->
+<rect width="64" height="64" fill="#eae2e4"/>
+<circle cx="10" cy="14" r="9" fill="#c9b6e4" opacity=".55"/>
+<circle cx="56" cy="20" r="7" fill="#f2c48d" opacity=".5"/>
+<circle cx="54" cy="46" r="8" fill="#9fd3c7" opacity=".45"/>
+<circle cx="8" cy="44" r="6" fill="#f0a3a3" opacity=".45"/>
+<path d="M15.5 31 C14 14 23 8.5 32 8.5 C41 8.5 50 14 48.5 31 Z" fill="#1f1a1c"/>
+<rect x="27" y="45" width="10" height="9" fill="#fbe7dc"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#24232a"/><path d="M26 51 L32 61 L38 51 Z" fill="#f7f6f2"/><path d="M31 53 L33 53 L33.6 60 L32 62 L30.4 60 Z" fill="#1d1d22"/><path d="M24 52 L30 61 L27 64 L22 54 Z M40 52 L34 61 L37 64 L42 54 Z" fill="#1c1c21"/>
+<ellipse cx="17.3" cy="35" rx="2.4" ry="3.4" fill="#fbe7dc"/><ellipse cx="46.7" cy="35" rx="2.4" ry="3.4" fill="#fbe7dc"/>
+<ellipse cx="32" cy="33" rx="14.5" ry="16" fill="#fbe7dc"/>
+<ellipse cx="25.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="25.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="24.4" cy="32.3" r="1.1" fill="#fff"/><ellipse cx="38.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="38.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="37.4" cy="32.3" r="1.1" fill="#fff"/>
+<path d="M22 29.3 L29 29.3" stroke="#1f1a1c" stroke-width="1.2" stroke-linecap="round"/><path d="M35 29.3 L42 29.3" stroke="#1f1a1c" stroke-width="1.2" stroke-linecap="round"/>
+<path d="M29.8 42.6 L34.2 42.6" stroke="#8a5a52" stroke-width="1.1" stroke-linecap="round"/>
+<path d="M16.5 31 C15.5 16 24 11 32 11 C42 11 49 16 48 29 C44 22.5 37 20.5 29 21.5 C23 23 18.5 26 16.5 31 Z" fill="#1f1a1c"/>
 </svg>

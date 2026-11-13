@@ -1,10 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#f3e4d8"/>
-  <path d="M14 50 C10 36 14 22 22 18 C30 13 42 14 47 22 C52 30 52 42 50 50 Z" fill="#4a3226"/>
-  <ellipse cx="32" cy="32" rx="9" ry="10" fill="#efcdb6"/>
-  <path d="M22 30 C21 20 34 16 42 24 C38 22 30 23 22 30 Z" fill="#4a3226"/>
-  <path d="M27 32 q1.5 -1.2 3 0 M34 32 q1.5 -1.2 3 0" stroke="#4a3226" stroke-width="1" fill="none" stroke-linecap="round"/>
-  <path d="M28 37 q4 3 8 0" stroke="#a9604a" stroke-width="1" fill="none" stroke-linecap="round"/>
-  <path d="M14 64 C16 52 24 46 32 46 C40 46 48 52 50 64 Z" fill="#b5653a"/>
-  <rect x="45" y="44" width="8" height="14" rx="3" fill="#c9cfd6"/>
+<!-- 荼：綁馬尾、方臉、深藍毛衣、笑 -->
+<rect width="64" height="64" fill="#f1e3db"/>
+<path d="M40 14 C48 6 56 10 54 22 C52 30 48 32 47 36 C46 28 46 20 40 14 Z" fill="#2a2220"/>
+<path d="M15.5 31 C14 14 23 8.5 32 8.5 C41 8.5 50 14 48.5 31 Z" fill="#2a2220"/>
+<rect x="27" y="45" width="10" height="9" fill="#f1d2b8"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#2f3f66"/><path d="M25.5 51.2 Q32 57.5 38.5 51.2" fill="none" stroke="#253251" stroke-width="2.4"/><path d="M26.5 51.5 Q32 56 37.5 51.5" fill="#f1d2b8"/>
+<ellipse cx="17.3" cy="35" rx="2.4" ry="3.4" fill="#f1d2b8"/><ellipse cx="46.7" cy="35" rx="2.4" ry="3.4" fill="#f1d2b8"/>
+<path d="M17 27 C17 18 47 18 47 27 L47 38 C47 45 42 49 32 49 C22 49 17 45 17 38 Z" fill="#f1d2b8"/>
+<ellipse cx="25.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="25.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="24.4" cy="32.3" r="1.1" fill="#fff"/><ellipse cx="38.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="38.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="37.4" cy="32.3" r="1.1" fill="#fff"/>
+<path d="M22 29.5 Q25.5 28 29 29.5" stroke="#2a2220" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M35 29.5 Q38.5 28 42 29.5" stroke="#2a2220" stroke-width="1" fill="none" stroke-linecap="round"/>
+<ellipse cx="22" cy="40" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".55"/><ellipse cx="42" cy="40" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".55"/>
+<path d="M28.5 41.5 Q32 46.5 35.5 41.5 Z" fill="#a8504a"/><path d="M29.3 41.9 L34.7 41.9 L34.2 42.9 L29.8 42.9 Z" fill="#fff"/>
+<path d="M16 32 C15 17 24 11 32 11 C40 11 49 17 48 32 C46.5 22.5 40 18 32 17.5 C24 18 17.5 22.5 16 32 Z" fill="#2a2220"/>
 </svg>

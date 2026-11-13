@@ -1,13 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#f6e7d2"/>
-  <rect y="44" width="64" height="20" fill="#c99868"/>
-  <path d="M0 47 L64 47" stroke="#b5845a" stroke-width="1"/>
-  <circle cx="50" cy="14" r="7" fill="#f2b65a"/>
-  <path d="M18 30 h24 l-3 18 a4 4 0 0 1 -4 3 h-10 a4 4 0 0 1 -4 -3 z" fill="#fffaf2" stroke="#d98a2b" stroke-width="1.4"/>
-  <path d="M42 34 a5 5 0 0 1 0 10" fill="none" stroke="#d98a2b" stroke-width="1.6"/>
-  <ellipse cx="30" cy="31" rx="11" ry="2.4" fill="#8a5a36"/>
-  <path d="M26 24 c-2 -3 2 -5 0 -8 M33 24 c-2 -3 2 -5 0 -8" fill="none" stroke="#d98a2b" stroke-width="1.2" stroke-linecap="round"/>
-  <path d="M14 53 h36" stroke="#a8784e" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="49" cy="50" r="4" fill="#d9573b"/>
-  <path d="M49 46 l0 -2" stroke="#8a5a36" stroke-width="1" stroke-linecap="round"/>
+<!-- 陽：皮膚白、心型臉、頭髮亂亂的、咖啡廳圍裙 -->
+<rect width="64" height="64" fill="#f8e9d8"/>
+<path d="M12 36 C9 15 22 7 32 7 C43 7 55 15 52 36 L54 46 L49 43 L50 51 L44 47 L40 52 L32 49 L24 52 L20 47 L14 51 L15 43 L10 46 Z" fill="#5a3b2a"/>
+<rect x="27" y="45" width="10" height="9" fill="#fbe7dc"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#f4efe6"/><path d="M26 51.5 Q32 56.5 38 51.5" fill="#fbe7dc"/><path d="M23 57 L41 57 L42 64 L22 64 Z" fill="#7a5236"/><path d="M23 57 L25 51.5 M41 57 L39 51.5" stroke="#7a5236" stroke-width="1.6"/>
+<path d="M17 28 C17 17 47 17 47 28 C47 38 40 45.5 32 49 C24 45.5 17 38 17 28 Z" fill="#fbe7dc"/>
+<ellipse cx="25.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="25.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="24.4" cy="32.3" r="1.1" fill="#fff"/><ellipse cx="38.5" cy="34" rx="3.2" ry="4.2" fill="#3a2d3f"/><ellipse cx="38.5" cy="35" rx="2.2" ry="2.8" fill="#6b4f3f"/><circle cx="37.4" cy="32.3" r="1.1" fill="#fff"/>
+<path d="M22 29.5 Q25.5 28 29 29.5" stroke="#5a3b2a" stroke-width="1" fill="none" stroke-linecap="round"/><path d="M35 29.5 Q38.5 28 42 29.5" stroke="#5a3b2a" stroke-width="1" fill="none" stroke-linecap="round"/>
+<ellipse cx="22" cy="40" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".55"/><ellipse cx="42" cy="40" rx="2.6" ry="1.4" fill="#f2a9a0" opacity=".55"/>
+<path d="M29.5 42 Q32 44 34.5 42" stroke="#9c5a52" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+<path d="M15 32 C14 16 24 10.5 32 10.5 C41 10.5 50 16 49 32 L46 25 L44 29 L41 22 L37 26 L35 20 L31 25 L28 20 L25 26 L22 22 L20 28 L18 25 Z" fill="#5a3b2a"/>
 </svg>
