@@ -62,8 +62,8 @@
       order.forEach(function (cid) {
         if (!who2[cid]) return;
         var nm = chars[cid].name, r = rd('wb:last:' + n + ':' + cid), b;
-        if (r) { b = mk('a', 'nv-btn go', '看到' + nm + '的第 ' + r.no + ' 章'); b.href = r.url; b.appendChild(mk('small', null, r.title)); }
-        else { var f1 = mine.filter(function (ch) { return ch.dataset.char === cid; })[0]; b = mk('a', 'nv-btn', '從' + nm + '的第 ' + f1.dataset.no + ' 章開始'); b.href = f1.href; }
+        if (r) { b = mk('a', 'nv-btn sm go', '看到' + nm + '的第 ' + r.no + ' 章'); b.href = r.url; }
+        else { var f1 = mine.filter(function (ch) { return ch.dataset.char === cid; })[0]; b = mk('a', 'nv-btn sm', '從' + nm + '的第 ' + f1.dataset.no + ' 章開始'); b.href = f1.href; }
         btns.appendChild(b);
       });
     } else {
@@ -257,7 +257,7 @@
     var sm = document.createElement('small'); sm.textContent = '第 ' + no + ' 章'; a.appendChild(sm); return a;
   }
   Object.keys(novels).forEach(function (id) {
-    if (split.indexOf(id) >= 0) {
+    if (split.indexOf(id) >= 0 || novels[id].split) {
       // 兩個角色各自一條線：每個角色各記一行
       var rows = [];
       Object.keys(chars).forEach(function (cid) { if (chars[cid].novel !== id) return; var r = rd('wb:last:' + id + ':' + cid); if (r) rows.push([cid, r]); });
