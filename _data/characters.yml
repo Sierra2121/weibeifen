@@ -175,3 +175,11 @@ di:
   glyph: 堤
   color: "#4b5260"
   bio: 二十七歲，雲林北港人，健身教練，一七六。騎一台黑色 KTR。菸戒了，手上還是要拿一根。
+shi:
+  name: 拾
+  handle: shi.timeline
+  novel: shiyi
+  avatar: shi.svg
+  glyph: 拾
+  color: "#8a6a4f"
+  bio: 十六歲，中興高中高一。住在中興新村的省府宿舍，筆記抄得比誰都完整。
