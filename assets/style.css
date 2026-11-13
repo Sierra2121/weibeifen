@@ -279,14 +279,14 @@ html[data-theme="night"] .reading .era{background:var(--chip)}
 .rg{margin-bottom:28px}
 .rg-side{margin:26px 0 4px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:20px;letter-spacing:.08em}
 .rg-area{margin:14px 2px 8px;font-size:13px;font-weight:500;color:var(--sub);letter-spacing:.1em}
-/* 台灣地圖：滑到地形區，旁邊列出小說 */
+/* 台灣地圖：分層設色底圖，滑到地形區，旁邊列出小說 */
 .tw-wrap{display:flex;gap:18px;align-items:flex-start;margin:4px 0 10px}
 .tw-map{flex:0 0 58%;margin:0}
 .tw-map svg{display:block;width:100%;height:auto}
-.tw-rg{fill:#ece6da;stroke:#faf7f0;stroke-width:1.2;cursor:pointer;transition:fill .15s}
-.tw-rg.has{fill:#ddd0b8}
-.tw-rg:hover,.tw-rg.on{fill:#b98f5e}
-.tw-line{fill:none;stroke:#a89c86;stroke-width:1.1;stroke-dasharray:4 4;pointer-events:none}
+.tw-rg{fill:rgba(255,255,255,0);stroke:none;cursor:pointer;transition:fill .15s}
+.tw-rg.has{stroke:rgba(255,255,255,.7);stroke-width:.8}
+.tw-rg:hover,.tw-rg.on{fill:rgba(255,248,235,.5);stroke:#fff;stroke-width:1.6}
+.tw-line{fill:none;stroke:rgba(80,70,55,.45);stroke-width:1;stroke-dasharray:3 3;pointer-events:none}
 .tw-panel{flex:1;position:sticky;top:90px;min-height:120px;padding:16px 4px}
 .tw-panel h3{margin:0 0 10px;font-size:13px;font-weight:500;color:var(--sub);letter-spacing:.08em;line-height:1.6}
 .tw-hint,.tw-empty{margin:0;font-size:14px;color:var(--sub);line-height:1.8}
@@ -295,3 +295,4 @@ html[data-theme="night"] .reading .era{background:var(--chip)}
 .tw-item small{font-size:12px;color:var(--sub)}
 .tw-item:hover b{text-decoration:underline}
 @media (max-width:560px){.tw-wrap{flex-direction:column}.tw-map{flex:none;width:100%;max-width:400px;margin:0 auto}.tw-panel{position:static;width:100%;min-height:0;padding:4px 2px}}
+.tw-src{margin-top:4px;font-size:11px;color:var(--sub);text-align:center}
