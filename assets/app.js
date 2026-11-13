@@ -290,3 +290,35 @@
   });
   arrow.onclick = function () { var o = g.classList.toggle('open'); arrow.setAttribute('aria-expanded', o); };
 })();
+
+// 小說總覽的台灣地圖：滑到（手機點）一個地形區，旁邊列出那區的小說
+(function () {
+  var wrap = document.querySelector('.tw-wrap'); if (!wrap) return;
+  var panel = wrap.querySelector('.tw-panel'), hint = panel.innerHTML;
+  var novels = JSON.parse(document.getElementById('novels').textContent || '{}');
+  var chars = JSON.parse(document.getElementById('chars').textContent || '{}');
+  var regions = JSON.parse(document.getElementById('regions').textContent || '[]'), names = {};
+  regions.forEach(function (s) { (s.areas || []).forEach(function (a) { names[a.key] = a.name; }); });
+  function color(id) { for (var k in chars) if (chars[k].novel === id) return chars[k].color; return '#6b665c'; }
+  function list(key) { return Object.keys(novels).filter(function (id) { return novels[id].region === key; }); }
+  var cur = null;
+  function show(key) {
+    if (key === cur) return; cur = key;
+    wrap.querySelectorAll('.tw-rg').forEach(function (r) { r.classList.toggle('on', r.dataset.rg === key); });
+    panel.innerHTML = '';
+    var h = document.createElement('h3'); h.textContent = names[key] || ''; panel.appendChild(h);
+    var ids = list(key);
+    if (!ids.length) { var p = document.createElement('p'); p.className = 'tw-empty'; p.textContent = '這裡還沒有小說。'; panel.appendChild(p); return; }
+    ids.forEach(function (id) {
+      var a = document.createElement('a'); a.className = 'tw-item'; a.href = BASE + '/?n=' + id; a.style.color = color(id);
+      var b = document.createElement('b'); b.textContent = novels[id].title; a.appendChild(b);
+      if (novels[id].era) { var s = document.createElement('small'); s.textContent = novels[id].era; a.appendChild(s); }
+      panel.appendChild(a);
+    });
+  }
+  wrap.querySelectorAll('.tw-rg').forEach(function (r) {
+    if (list(r.dataset.rg).length) r.classList.add('has');
+    r.addEventListener('mouseenter', function () { show(r.dataset.rg); });
+    r.addEventListener('click', function () { show(r.dataset.rg); });
+  });
+})();
