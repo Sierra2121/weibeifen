@@ -268,3 +268,8 @@ html[data-theme="night"] .reading .era{background:var(--chip)}
 .d-sub a.d-nv{padding-bottom:2px}
 .d-sub a.d-ch{padding:4px 6px 4px 22px;font-size:14px;color:#5e594f}
 .nv-btn.sm{min-height:36px;padding:0 14px;font-size:14px}
+/* 介紹頁：按鈕離頭像遠一點、大一點；「章節」移到框外 */
+.nv-chars{margin-bottom:28px}
+.nv-btns{margin-bottom:22px}
+.nv-btn.sm{min-height:46px;padding:0 22px;font-size:16px}
+.nv-h{margin:22px 4px 10px}
