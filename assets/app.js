@@ -306,6 +306,10 @@
     if (key === cur) return; cur = key;
     wrap.querySelectorAll('.tw-rg').forEach(function (r) { r.classList.toggle('on', r.dataset.rg === key); });
     panel.innerHTML = '';
+    // 手機版：小說列表從底部滑出，右上角可以收起來
+    var x = document.createElement('button'); x.type = 'button'; x.className = 'tw-close'; x.setAttribute('aria-label', '收起'); x.textContent = '✕';
+    x.onclick = function (e) { e.stopPropagation(); wrap.classList.remove('open'); pinned = null; cur = null; wrap.querySelectorAll('.tw-rg').forEach(function (r) { r.classList.remove('on', 'pin'); }); };
+    panel.appendChild(x); wrap.classList.add('open');
     var h = document.createElement('h3'); h.textContent = names[key] || ''; panel.appendChild(h);
     var ids = list(key);
     if (!ids.length) { var p = document.createElement('p'); p.className = 'tw-empty'; p.textContent = '這裡還沒有小說。'; panel.appendChild(p); return; }
