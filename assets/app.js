@@ -149,6 +149,17 @@
       var ok = (!n || t.dataset.novel === n) && (!liked || has('like:' + key)) && (!rp || has('rp:' + key));
       t.hidden = true; if (ok) { shown++; hits.push(t); }
     });
+    // 首頁動態：每次打開都隨機排，盡量讓相鄰兩則不是同一部小說
+    if (!liked && !rp && !n) {
+      for (var i = hits.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), tmp = hits[i]; hits[i] = hits[j]; hits[j] = tmp; }
+      var out = [], prev = null;
+      while (hits.length) {
+        var k = 0; while (k < hits.length && hits[k].dataset.novel === prev) k++;
+        if (k === hits.length) k = 0;
+        prev = hits[k].dataset.novel; out.push(hits.splice(k, 1)[0]);
+      }
+      hits = out; hits.forEach(function (t) { feed.appendChild(t); });
+    }
     // 一次先放 15 則，按「載入更多」再放 15 則
     var PAGE = 15, upto = 0, more = document.querySelector('.more-btn');
     function step() { hits.slice(upto, upto + PAGE).forEach(function (t) { t.hidden = false; }); upto += PAGE; more.hidden = upto >= hits.length; }
