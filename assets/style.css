@@ -296,3 +296,10 @@ html[data-theme="night"] .reading .era{background:var(--chip)}
 .tw-item:hover b{text-decoration:underline}
 @media (max-width:560px){.tw-wrap{flex-direction:column}.tw-map{flex:none;width:100%;max-width:400px;margin:0 auto}.tw-panel{position:static;width:100%;min-height:0;padding:4px 2px}}
 .tw-src{margin-top:4px;font-size:11px;color:var(--sub);text-align:center}
+/* 小說總覽頁加寬，地圖放大 */
+body.wide .bar,body.wide .wrap,body.wide .foot{max-width:960px}
+body.wide .tw-map{flex:0 0 62%}
+body.wide .tw-panel{padding-top:40px}
+body.wide .tw-item b{font-size:22px}
+@media (max-width:560px){.tw-map{max-width:none!important}}
+body.wide .rg{max-width:700px;margin-left:auto;margin-right:auto}
