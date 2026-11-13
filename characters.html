@@ -1,0 +1,19 @@
+---
+layout: default
+title: 角色
+permalink: /characters/
+---
+<h1 class="ov-h">角色</h1>
+<div class="ov-list">
+{%- for ch in site.data.characters -%}
+{%- assign c = ch[1] -%}
+  <a class="ov-card" href="{{ '/' | relative_url }}?c={{ ch[0] }}">
+    <span class="avatar" style="--c:{{ c.color }}">{%- if c.avatar -%}<img src="{{ '/assets/avatars/' | append: c.avatar | relative_url }}?v={{ site.time | date: '%s' }}" alt="">{%- else -%}{{ c.glyph }}{%- endif -%}</span>
+    <span class="ov-t">
+      <b>{{ c.name }}</b>
+      <small>@{{ c.handle }} · 《{{ site.data.novels[c.novel].title }}》</small>
+      <span>{{ c.bio }}</span>
+    </span>
+  </a>
+{%- endfor -%}
+</div>

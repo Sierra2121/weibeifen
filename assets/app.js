@@ -223,5 +223,22 @@
   var tb = document.querySelector('.theme-btn');
   function lab() { tb.setAttribute('aria-label', d.dataset.theme === 'night' ? '切換白天模式' : '切換夜間模式'); }
   if (tb) { tb.onclick = function () { d.dataset.theme = d.dataset.theme === 'night' ? 'day' : 'night'; save('wb:theme', d.dataset.theme); lab(); }; lab(); }
-  if (sec && sec.dataset.novel) save('wb:last:' + sec.dataset.novel, JSON.stringify({ url: location.pathname, no: sec.dataset.no, title: sec.dataset.title }));
+  if (sec && sec.dataset.novel) save('wb:last:' + sec.dataset.novel, JSON.stringify({ url: location.pathname, no: sec.dataset.no, title: sec.dataset.title, t: Date.now() }));
+})();
+
+// 選單：碰到「小說」滑出看過的小說，手機點箭頭展開
+(function () {
+  var g = document.querySelector('.d-group'); if (!g) return;
+  var sub = g.querySelector('.d-sub'), arrow = g.querySelector('.d-arrow');
+  var novels = JSON.parse(document.getElementById('novels').textContent || '{}'), list = [];
+  Object.keys(novels).forEach(function (id) {
+    try { var r = JSON.parse(localStorage.getItem('wb:last:' + id) || 'null'); if (r && r.url) list.push([id, r]); } catch (e) {}
+  });
+  list.sort(function (a, b) { return (b[1].t || 0) - (a[1].t || 0); });
+  if (!list.length) { var p = document.createElement('p'); p.textContent = '還沒有看過的小說'; sub.appendChild(p); }
+  list.forEach(function (x) {
+    var a = document.createElement('a'); a.href = x[1].url; a.textContent = novels[x[0]].title;
+    var sm = document.createElement('small'); sm.textContent = '第 ' + x[1].no + ' 章'; a.appendChild(sm); sub.appendChild(a);
+  });
+  arrow.onclick = function () { var o = g.classList.toggle('open'); arrow.setAttribute('aria-expanded', o); };
 })();

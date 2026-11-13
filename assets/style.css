@@ -215,3 +215,30 @@ html[data-theme="night"] .reading .era{background:var(--chip)}
   .r-bar .off{color:var(--sub);opacity:.5}
   .fs button{min-width:36px}
 }
+
+/* ===== 選單：小說、角色 ===== */
+.d-group{position:relative;display:flex;flex-wrap:wrap;align-items:center}
+.d-group > .d-item{flex:1}
+.d-arrow{display:none;width:44px;height:44px;border:0;border-radius:50%;background:none;color:var(--sub);cursor:pointer;place-items:center}
+.d-arrow svg{transition:transform .2s}
+.d-group.open .d-arrow svg{transform:rotate(90deg)}
+.d-sub{display:none;flex-basis:100%;margin:0 0 6px 46px;padding-left:12px;border-left:2px solid var(--line)}
+.d-group.open .d-sub{display:block;animation:slide .2s ease}
+@media (hover:hover){.d-group:hover .d-sub{display:block;animation:slide .2s ease}}
+@media (hover:none){.d-arrow{display:grid}}
+@keyframes slide{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.d-sub a{display:flex;align-items:baseline;gap:10px;padding:8px 6px;border-radius:10px;font-size:15px}
+.d-sub a:hover{background:var(--chip)}
+.d-sub small{margin-left:auto;font-size:12px;color:var(--sub)}
+.d-sub p{margin:6px 0;font-size:13px;color:var(--sub)}
+/* ===== 小說總覽、角色總覽 ===== */
+.ov-h{margin:8px 0 14px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:24px;letter-spacing:.1em}
+.ov-list{display:grid;gap:12px}
+.ov-card{display:flex;gap:14px;align-items:flex-start;padding:18px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+.ov-card:hover{border-color:var(--ink)}
+.ov-icon{width:44px;text-align:center;font-size:30px;line-height:44px;flex:none}
+.ov-card .avatar{flex:none}
+.ov-t{display:flex;flex-direction:column;min-width:0;line-height:1.6}
+.ov-t b{font-family:"Noto Serif TC",serif;font-size:19px;font-weight:700}
+.ov-t small{font-size:13px;color:var(--sub)}
+.ov-t span{margin-top:4px;font-size:15px;color:#4a463f}
