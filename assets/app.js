@@ -62,13 +62,14 @@
       order.forEach(function (cid) {
         if (!who2[cid]) return;
         var nm = chars[cid].name, r = rd('wb:last:' + n + ':' + cid), b;
-        if (r) { b = mk('a', 'nv-btn sm go', '看到' + nm + '的第 ' + r.no + ' 章'); b.href = r.url; }
-        else { var f1 = mine.filter(function (ch) { return ch.dataset.char === cid; })[0]; b = mk('a', 'nv-btn sm', '從' + nm + '的第 ' + f1.dataset.no + ' 章開始'); b.href = f1.href; }
-        btns.appendChild(b);
+        if (r) { b = mk('a', 'nv-btn sm go', '讀' + nm + '的第 ' + r.no + ' 章'); b.href = r.url; btns.appendChild(b); }
       });
     } else {
-      if (mine[0]) { var f = mk('a', 'nv-btn', '從第 ' + mine[0].dataset.no + ' 章開始'); f.href = mine[0].href; btns.appendChild(f); }
-      if (lr) { var k = mk('a', 'nv-btn go', '繼續讀第 ' + lr.no + ' 章'); k.href = lr.url; k.appendChild(mk('small', null, lr.title)); btns.appendChild(k); }
+      if (lr) {
+        if (!lr.char) mine.forEach(function (ch) { if (ch.pathname === lr.url) lr.char = ch.dataset.char; });
+        var nm2 = lr.char && chars[lr.char] ? chars[lr.char].name : '';
+        var k = mk('a', 'nv-btn sm go', '讀' + (nm2 ? nm2 + '的' : '') + '第 ' + lr.no + ' 章'); k.href = lr.url; btns.appendChild(k);
+      }
     }
     box2.appendChild(btns);
     box2.appendChild(mk('h2', 'nv-h', '章節'));
