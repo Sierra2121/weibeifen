@@ -2,7 +2,7 @@
 
 兩種模式：
   python post_threads.py outbox    發 .github/threads/outbox/ 裡等著發的貼文（蔡說「發」時，Claude 放進去並推上來）
-  python post_threads.py backfill  每天從舊章節挑一章，用章節的 teaser 發（各本小說輪流，從第一章開始）
+  python post_threads.py backfill  每天發 .github/threads/queue/ 裡蔡核准過的下一篇
 
 發過的章節記在 .github/threads/done.txt（每行：檔名 小說id），不會重發。
 """
@@ -129,41 +129,32 @@ def run_outbox():
     return failed
 
 
+QUEUE = BASE / "queue"
+
+
 def run_backfill():
-    novels = yaml.safe_load((ROOT / "_data" / "novels.yml").read_text(encoding="utf-8"))
-    skip_file = BASE / "skip.txt"  # 暫時不發的小說 id，一行一個
-    skip = set(skip_file.read_text(encoding="utf-8").split()) if skip_file.exists() else set()
-    order = [n for n in novels.keys() if n not in skip]
-    done = load_done()
-    done_files = {d[0] for d in done}
-    now = datetime.now(timezone.utc)
-
-    queue = {n: [] for n in order}
-    for p in POSTS.glob("*.md"):
-        if p.name in done_files:
-            continue
-        fm, _ = front_matter(p)
-        n = fm.get("novel")
-        if n in queue and fm.get("teaser") and post_date(fm, p) <= now:
-            queue[n].append((post_date(fm, p), fm.get("chapter") or 0, p, fm))
-    for n in queue:
-        queue[n].sort(key=lambda x: (x[1], x[0]))
-
-    last = done[-1][1] if done else None
-    start = (order.index(last) + 1) if last in order else 0
-    for i in range(len(order)):
-        n = order[(start + i) % len(order)]
-        if queue[n]:
-            _, _, p, fm = queue[n][0]
-            title = novels[n].get("title", "")
-            text = f"{fm['teaser'].strip()}\n\n——《{title}》"
-            if len(text) > LIMIT:
-                text = fm["teaser"].strip()[: LIMIT - len(title) - 8] + "…" + f"\n\n——《{title}》"
-            pid = publish(text, SITE.format(slug=slug_of(p.name)))
-            mark_done(p.name, n)
-            print(f"已發 {p.name}（《{title}》）到脆：{pid}")
-            return False
-    print("舊章節都發完了。")
+    """每天發排程裡的下一篇。排程檔名：「三位數順序_章節slug.txt」，內容同 outbox。排程空了就不發。"""
+    files = sorted(QUEUE.glob("*.txt")) if QUEUE.exists() else []
+    if not files:
+        print("排程裡沒有核准過的貼文，今天不發。")
+        return False
+    f = files[0]
+    slug = f.stem.split("_", 1)[1]
+    text = f.read_text(encoding="utf-8").strip()
+    tag = None
+    if text.startswith("#"):
+        first, _, text = text.partition("\n")
+        tag, text = first[1:].strip(), text.strip()
+    post = find_post(slug)
+    if post is None:
+        print(f"{f.name}：找不到章節 {slug}")
+        return True
+    fm, _ = front_matter(post)
+    pid = publish(text, SITE.format(slug=slug), tag)
+    SENT.mkdir(parents=True, exist_ok=True)
+    f.rename(SENT / f.name)
+    mark_done(post.name, fm.get("novel", "?"))
+    print(f"{f.name}：已發到脆（{pid}）")
     return False
 
 
