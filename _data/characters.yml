@@ -199,3 +199,19 @@ isle:
   glyph: 嶼
   color: "#a35a6a"
   bio: 二十二歲，剛從倫敦回來被疫情困住，在仁愛區開了一間沒什麼人的公仔店。看心情回訊息。
+shan:
+  name: 杉
+  handle: shan.beats
+  novel: weigongkai
+  avatar: shan.svg
+  glyph: 杉
+  color: "#a0613a"
+  bio: 二十五歲，送外送，也在樂團打鼓。不會說謊，來上節目是因為通告費很好。
+ji:
+  name: 霽
+  handle: ji.afterrain
+  novel: weigongkai
+  avatar: ji.svg
+  glyph: 霽
+  color: "#5d6474"
+  bio: 二十七歲，室內設計助理。話很少，想很多。睡不著的時候會去洗碗。
