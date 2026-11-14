@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- 蕨：中長髮隨便夾起、幾撮掉下來、瞇瞇眼、舊刷毛外套 -->
+<rect width="64" height="64" fill="#ede6dc"/>
+<path d="M22 12 C26 4 38 4 42 12 L40 16 L24 16 Z" fill="#3a2c24"/><rect x="27" y="9" width="10" height="3" rx="1.2" fill="#c98a5a"/>
+<rect x="27" y="45" width="10" height="9" fill="#f6dfd0"/><path d="M8 64 C10 53 20 50 32 50 C44 50 54 53 56 64 Z" fill="#8c7d9a"/><path d="M26 50 L32 57 L38 50" stroke="#776886" stroke-width="1.5" fill="none"/>
+<ellipse cx="32" cy="34" rx="16" ry="16" fill="#f6dfd0"/>
+<path d="M22.5 35 Q25.5 32.8 28.5 35" stroke="#3a2c24" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M35.5 35 Q38.5 32.8 41.5 35" stroke="#3a2c24" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<ellipse cx="22.5" cy="40" rx="2.8" ry="1.5" fill="#f0a39a" opacity=".55"/><ellipse cx="41.5" cy="40" rx="2.8" ry="1.5" fill="#f0a39a" opacity=".55"/>
+<path d="M29 43 Q32 46 35 43" stroke="#9c5a52" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+<path d="M16 34 C15.5 20 23 14 32 14 C41 14 48.5 20 48 34 C46 25 40 20 32 20 C24 20 18 25 16 34 Z" fill="#3a2c24"/>
+<path d="M17 30 C15 38 16 44 18 47" stroke="#3a2c24" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M46 29 C48.5 36 48 42 46.5 45" stroke="#3a2c24" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+</svg>
