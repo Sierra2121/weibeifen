@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- 靄：奶茶色長捲髮、米色針織、溫柔的笑 -->
+<rect width="64" height="64" fill="#f2e8e2"/>
+<path d="M13 52 C9 20 21 8 32 8 C43 8 55 20 51 52 C49 47 47 44 46 40 L18 40 C17 44 15 47 13 52 Z" fill="#b08a6c"/>
+<rect x="27" y="45" width="10" height="9" fill="#f9e7dd"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#e8dcc6"/><path d="M24 53 Q32 57 40 53" stroke="#d6c8ae" stroke-width="1.2" fill="none"/>
+<path d="M14 40 C11 47 13 54 17 58 C17 52 18 46 20 42 Z M50 40 C53 47 51 54 47 58 C47 52 46 46 44 42 Z" fill="#b08a6c"/>
+<ellipse cx="32" cy="33" rx="14" ry="16" fill="#f9e7dd"/>
+<path d="M22.5 34.5 Q25.5 37 28.5 34.5" stroke="#3a2a2a" stroke-width="1.5" fill="none" stroke-linecap="round"/><path d="M35.5 34.5 Q38.5 37 41.5 34.5" stroke="#3a2a2a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+<ellipse cx="22.5" cy="40" rx="2.6" ry="1.4" fill="#eaa49c" opacity=".55"/><ellipse cx="41.5" cy="40" rx="2.6" ry="1.4" fill="#eaa49c" opacity=".55"/>
+<path d="M29 42.5 Q32 45 35 42.5" stroke="#b05a5a" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M17 31 C16 18 24 12 32 12 C40 12 48 18 47 31 C44 23 38 18 30 19 C25 20 20 24 17 31 Z" fill="#b08a6c"/>
+</svg>
