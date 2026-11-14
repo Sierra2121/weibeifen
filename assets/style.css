@@ -328,3 +328,6 @@ body.wide .rg{max-width:700px;margin-left:auto;margin-right:auto}
 .resume button{min-height:32px;padding:0 12px;border:1px solid currentColor;border-radius:999px;background:none;color:inherit;font:inherit;font-size:13px;cursor:pointer}
 
 .tip{text-align:center;margin:24px 0 8px}.tip a{display:inline-block;padding:8px 18px;border:1px solid var(--line);border-radius:999px;font-size:14px;color:var(--sub);text-decoration:none}.tip a:hover{color:inherit}.foot a{color:inherit}
+
+/* 章節頁已經有「喜歡這一章？請畝吃糖果」，頁尾就不再放 */
+body.reading .foot .candy{display:none}
