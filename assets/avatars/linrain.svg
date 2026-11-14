@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- 霖：一刀切短髮、挑眉、睡衣、口袋有零食 -->
+<rect width="64" height="64" fill="#f1e6d6"/>
+<path d="M16 42 C14.5 17 23 10 32 10 C41 10 49.5 17 48 42 Z" fill="#2b2420"/>
+<rect x="27" y="45" width="10" height="9" fill="#f3dccd"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#a8b8d8"/><circle cx="22" cy="58" r="1.6" fill="#f7f6f2"/><circle cx="40" cy="60" r="1.6" fill="#f7f6f2"/><circle cx="31" cy="61" r="1.6" fill="#f7f6f2"/>
+<ellipse cx="32" cy="33" rx="14" ry="15.5" fill="#f3dccd"/>
+<ellipse cx="25.5" cy="35" rx="2.6" ry="3.3" fill="#2b2420"/><circle cx="24.7" cy="34" r=".9" fill="#fff"/><ellipse cx="38.5" cy="35" rx="2.6" ry="3.3" fill="#2b2420"/><circle cx="37.7" cy="34" r=".9" fill="#fff"/>
+<path d="M22 29.5 L29 30" stroke="#2b2420" stroke-width="1.3" stroke-linecap="round"/><path d="M35 28.5 Q38.5 26.5 42 28" stroke="#2b2420" stroke-width="1.3" fill="none" stroke-linecap="round"/>
+<path d="M28 42.5 Q32 44.5 36 41.5" stroke="#9c5a52" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<ellipse cx="25.5" cy="39.5" rx="3" ry="1" fill="#d7b2a8" opacity=".6"/><ellipse cx="38.5" cy="39.5" rx="3" ry="1" fill="#d7b2a8" opacity=".6"/>
+<path d="M17.5 30 C17 17 24 13 32 13 C40 13 47 17 46.5 30 L46 26 L18 26 Z" fill="#2b2420"/>
+</svg>
