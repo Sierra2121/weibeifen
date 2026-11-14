@@ -1,32 +1,38 @@
-name: 發新章節到脆
+name: 發到脆
 
 on:
+  # 蔡說「發」→ Claude 把貼文放進 outbox 推上來，就會發
   push:
     branches: [main]
-    paths: ["_posts/**"]
+    paths: [".github/threads/outbox/**"]
+  # 每天晚上 8 點左右（台灣時間）從舊章節發一篇
+  schedule:
+    - cron: "47 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: threads
+  cancel-in-progress: false
 
 jobs:
   post:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 20
-      - name: 找出這次新增的章節
-        id: new
-        run: |
-          BEFORE="${{ github.event.before }}"
-          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
-            FILES=$(git diff --name-only --diff-filter=A "$BEFORE" HEAD -- _posts | tr '\n' ' ')
-          else
-            FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- _posts | tr '\n' ' ')
-          fi
-          echo "files=$FILES" >> "$GITHUB_OUTPUT"
-          echo "新增：$FILES"
-      - name: 發到脆
-        if: steps.new.outputs.files != ''
+      - name: 發文
         env:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
         run: |
           pip install --quiet pyyaml
-          python .github/scripts/post_threads.py ${{ steps.new.outputs.files }}
+          if [ "${{ github.event_name }}" = "push" ]; then MODE=outbox; else MODE=backfill; fi
+          python .github/scripts/post_threads.py $MODE
+      - name: 記錄已發的章節
+        if: always()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add .github/threads
+          git diff --cached --quiet || (git commit -m "記錄已發到脆的章節" && git pull --rebase && git push)
