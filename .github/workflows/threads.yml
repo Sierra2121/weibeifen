@@ -1,0 +1,32 @@
+name: 發新章節到脆
+
+on:
+  push:
+    branches: [main]
+    paths: ["_posts/**"]
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - name: 找出這次新增的章節
+        id: new
+        run: |
+          BEFORE="${{ github.event.before }}"
+          if git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            FILES=$(git diff --name-only --diff-filter=A "$BEFORE" HEAD -- _posts | tr '\n' ' ')
+          else
+            FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- _posts | tr '\n' ' ')
+          fi
+          echo "files=$FILES" >> "$GITHUB_OUTPUT"
+          echo "新增：$FILES"
+      - name: 發到脆
+        if: steps.new.outputs.files != ''
+        env:
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+        run: |
+          pip install --quiet pyyaml
+          python .github/scripts/post_threads.py ${{ steps.new.outputs.files }}
