@@ -131,7 +131,9 @@ def run_outbox():
 
 def run_backfill():
     novels = yaml.safe_load((ROOT / "_data" / "novels.yml").read_text(encoding="utf-8"))
-    order = list(novels.keys())
+    skip_file = BASE / "skip.txt"  # 暫時不發的小說 id，一行一個
+    skip = set(skip_file.read_text(encoding="utf-8").split()) if skip_file.exists() else set()
+    order = [n for n in novels.keys() if n not in skip]
     done = load_done()
     done_files = {d[0] for d in done}
     now = datetime.now(timezone.utc)
