@@ -11,6 +11,8 @@
 <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 <script>try{var d=document.documentElement;d.dataset.fs=localStorage.getItem('wb:fs')||'m';d.dataset.theme=localStorage.getItem('wb:theme')||'day';}catch(e){}</script>
   <script data-goatcounter="https://sierra2121.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <meta name="robots" content="noai, noimageai">
+  <style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea{-webkit-user-select:text;user-select:text}</style>
 </head>
 <body class="{{ layout.body_class }} {{ page.body_class }}">
 <header class="top">
@@ -44,7 +46,7 @@
 <main class="wrap">
 {{ content }}
 </main>
-<footer class="foot">© 畝 · 所有故事皆為虛構，若有雷同，可能是記憶出了錯。</footer>
+<footer class="foot">© 畝 版權所有，禁止轉載 · 所有故事皆為虛構，若有雷同，可能是記憶出了錯。</footer>
 <script id="chars" type="application/json">{{ site.data.characters | jsonify }}</script>
 <script id="novels" type="application/json">{{ site.data.novels | jsonify }}</script>
 {%- comment -%} 兩個角色各自編章號的小說（章號會重複），選單要分角色記讀到哪 {%- endcomment -%}
@@ -52,5 +54,6 @@
 <script>window.SPLIT = "{{ split }}".split(",");</script>
 <script>window.BASE = "{{ site.baseurl }}"; window.VER = "{{ site.time | date: '%s' }}";</script>
 <script src="{{ '/assets/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+<script>(function(){var ok=function(e){var t=e.target;return t&&t.closest&&t.closest('input,textarea');};['contextmenu','selectstart','copy','cut','dragstart'].forEach(function(n){document.addEventListener(n,function(e){if(!ok(e))e.preventDefault();});});})();</script>
 </body>
 </html>
