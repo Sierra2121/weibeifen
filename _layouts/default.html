@@ -12,7 +12,8 @@
 <script>try{var d=document.documentElement;d.dataset.fs=localStorage.getItem('wb:fs')||'m';d.dataset.theme=localStorage.getItem('wb:theme')||'day';}catch(e){}</script>
   <script data-goatcounter="https://sierra2121.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
   <meta name="robots" content="noai, noimageai">
-  <style>body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea{-webkit-user-select:text;user-select:text}</style>
+  <script>(function(){try{var q=new URLSearchParams(location.search).get('copy');if(q==='on')localStorage.setItem('wb-copy','1');if(q==='off')localStorage.removeItem('wb-copy');if(localStorage.getItem('wb-copy')==='1')document.documentElement.classList.add('can-copy');}catch(e){}})();</script>
+  <style>html:not(.can-copy) body{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}input,textarea{-webkit-user-select:text;user-select:text}</style>
 </head>
 <body class="{{ layout.body_class }} {{ page.body_class }}">
 <header class="top">
@@ -54,6 +55,6 @@
 <script>window.SPLIT = "{{ split }}".split(",");</script>
 <script>window.BASE = "{{ site.baseurl }}"; window.VER = "{{ site.time | date: '%s' }}";</script>
 <script src="{{ '/assets/app.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
-<script>(function(){var ok=function(e){var t=e.target;return t&&t.closest&&t.closest('input,textarea');};['contextmenu','selectstart','copy','cut','dragstart'].forEach(function(n){document.addEventListener(n,function(e){if(!ok(e))e.preventDefault();});});})();</script>
+<script>(function(){var ok=function(e){if(document.documentElement.classList.contains('can-copy'))return true;var t=e.target;return t&&t.closest&&t.closest('input,textarea');};['contextmenu','selectstart','copy','cut','dragstart'].forEach(function(n){document.addEventListener(n,function(e){if(!ok(e))e.preventDefault();});});})();</script>
 </body>
 </html>
