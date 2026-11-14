@@ -215,3 +215,19 @@ ji:
   glyph: 霽
   color: "#5d6474"
   bio: 二十七歲，室內設計助理。話很少，想很多。睡不著的時候會去洗碗。
+tai:
+  name: 苔
+  handle: tai.process
+  novel: weigongkai
+  avatar: tai.svg
+  glyph: 苔
+  color: "#76698a"
+  bio: 二十九歲，中科半導體製程工程師。話不多，社交電量很低。來上節目是想談戀愛，認真的。
+feng:
+  name: 楓
+  handle: feng.onstage
+  novel: weigongkai
+  avatar: feng.svg
+  glyph: 楓
+  color: "#b5473c"
+  bio: 二十三歲，剛從舞蹈系畢業。看狗狗影片也會哭。來上節目是想交朋友。

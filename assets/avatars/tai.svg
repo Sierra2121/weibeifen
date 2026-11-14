@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- 苔：低馬尾、黑框眼鏡、圓臉、淺藍針織 -->
+<rect width="64" height="64" fill="#e6e2ec"/>
+<path d="M15 34 C13.5 15 23 9 32 9 C41 9 50.5 15 49 34 Z" fill="#221d22"/>
+<rect x="27" y="46" width="10" height="8" fill="#f6e2d6"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#a9c3dd"/>
+<ellipse cx="32" cy="34" rx="15.5" ry="15.5" fill="#f6e2d6"/>
+<ellipse cx="25.5" cy="35" rx="2.4" ry="2.9" fill="#2b2530"/><ellipse cx="38.5" cy="35" rx="2.4" ry="2.9" fill="#2b2530"/>
+<rect x="20" y="30.5" width="11" height="8.5" rx="2" fill="none" stroke="#111" stroke-width="1.6"/><rect x="33" y="30.5" width="11" height="8.5" rx="2" fill="none" stroke="#111" stroke-width="1.6"/><path d="M31 34 L33 34" stroke="#111" stroke-width="1.4"/>
+<path d="M22 40.5 Q25.5 41.8 29 40.5 M35 40.5 Q38.5 41.8 42 40.5" stroke="#b9a3a3" stroke-width=".7" fill="none"/>
+<path d="M29.5 44.5 Q32 45.8 34.5 44.5" stroke="#9c5a52" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+<path d="M16.5 32 C16 18 24 12.5 32 12.5 C40 12.5 48 18 47.5 32 C45 23 39 19.5 32 19.5 C25 19.5 19 23 16.5 32 Z" fill="#221d22"/>
+</svg>
