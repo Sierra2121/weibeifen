@@ -32,6 +32,7 @@ body_class: reading
   <div class="ch-text">{{ content }}</div>
   <div class="r-end" aria-hidden="true"><span></span><span></span><span></span></div>
   {% capture u %}{{ page.url | relative_url }}{% endcapture %}{% include actions.html key=page.slug url=u %}
+  <p class="tip"><a href="https://portaly.cc/weibeifen/support" target="_blank" rel="noopener">🍬 喜歡這一章？請畝吃糖果</a></p>
   <nav class="r-nav" aria-label="換章">
     {%- if pv -%}<a class="r-prev" href="{{ pv.url | relative_url }}"><small>← 上一章</small><span>{{ pv.title }}</span></a>{%- else -%}<span class="r-prev off"><small>← 上一章</small><span>這是第一章</span></span>{%- endif -%}
     {%- if nx -%}<a class="r-next" href="{{ nx.url | relative_url }}"><small>下一章 →</small><span>{{ nx.title }}</span></a>{%- else -%}<span class="r-next off"><small>下一章 →</small><span>目前最後一章</span></span>{%- endif -%}

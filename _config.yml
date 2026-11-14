@@ -9,3 +9,6 @@ markdown: kramdown
 permalink: /t/:title/
 exclude:
   - README.md
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
