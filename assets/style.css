@@ -317,3 +317,12 @@ body.wide .rg{max-width:700px;margin-left:auto;margin-right:auto}
   .tw-panel h3{padding-right:40px}
 }
 @media (max-width:560px){.tw-panel .tw-item{padding:6px 0}.tw-panel .tw-item b{font-size:18px}}
+/* 章節列表：讀完、讀到這 */
+.chapter.toc.done .ch-no,.chapter.toc.done .ch-title{opacity:.5}
+.chapter.toc.done .ch-go{font-size:0}
+.chapter.toc.done .ch-go::after{content:"✓";font-size:15px;color:var(--sub)}
+.chapter.toc.here .ch-title::after{content:"讀到這";display:inline-block;margin-left:10px;padding:1px 8px;border-radius:999px;background:var(--accent);color:#fff;font-family:"Noto Sans TC",sans-serif;font-size:12px;vertical-align:3px}
+/* 回到上次讀到的地方 */
+.resume{position:fixed;left:50%;bottom:76px;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:12px;padding:10px 12px 10px 18px;border-radius:999px;background:var(--ink);color:var(--bg);font-size:14px;box-shadow:0 4px 16px rgba(0,0,0,.18);transition:opacity .5s;white-space:nowrap}
+.resume.out{opacity:0}
+.resume button{min-height:32px;padding:0 12px;border:1px solid currentColor;border-radius:999px;background:none;color:inherit;font:inherit;font-size:13px;cursor:pointer}

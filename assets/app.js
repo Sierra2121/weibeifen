@@ -256,6 +256,59 @@
     save('wb:last:' + sec.dataset.novel, rec);
     save('wb:last:' + sec.dataset.novel + ':' + sec.dataset.char, rec);
   }
+  // 請瀏覽器把這個網站的紀錄當成要保留的資料（不是每個瀏覽器都會答應）
+  try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch (e) {}
+  // 記住這一章捲到哪：存正文讀到的比例，回來時捲回去；讀到九成算讀完
+  var txt = sec && sec.querySelector('.ch-text');
+  if (txt) {
+    var pk = 'wb:pos:' + location.pathname, rk = 'wb:read:' + location.pathname;
+    function ratio() {
+      var r = txt.getBoundingClientRect(), h = r.height - innerHeight * 0.5;
+      return h > 0 ? Math.min(1, Math.max(0, (innerHeight * 0.5 - r.top) / h)) : 1;
+    }
+    function keep() {
+      var p = ratio();
+      save(pk, String(Math.round(p * 1000) / 1000));
+      if (p >= 0.9) save(rk, '1');
+    }
+    var tm = null;
+    addEventListener('scroll', function () { clearTimeout(tm); tm = setTimeout(keep, 300); }, { passive: true });
+    addEventListener('pagehide', keep);
+    document.addEventListener('visibilitychange', function () { if (document.hidden) keep(); });
+    var old = 0; try { old = parseFloat(localStorage.getItem(pk)) || 0; } catch (e) {}
+    if (old > 0.03 && old < 0.97 && !location.hash) {
+      var go = function () {
+        var r = txt.getBoundingClientRect(), h = r.height - innerHeight * 0.5;
+        scrollTo(0, scrollY + r.top - innerHeight * 0.5 + old * h);
+        var t = document.createElement('div'); t.className = 'resume'; t.textContent = '回到上次讀到的地方';
+        var top = document.createElement('button'); top.type = 'button'; top.textContent = '從頭讀';
+        top.onclick = function () { scrollTo(0, 0); t.remove(); };
+        t.appendChild(top); document.body.appendChild(t);
+        setTimeout(function () { t.classList.add('out'); }, 4000);
+        setTimeout(function () { t.remove(); }, 4600);
+      };
+      if (document.readyState === 'complete') go(); else addEventListener('load', go);
+    }
+  }
+})();
+
+// 章節列表：讀完的打勾變淡，最後讀到的那章標「讀到這」
+(function () {
+  var tocs = document.querySelectorAll('.chapter.toc');
+  if (!tocs.length) return;
+  var here = {};
+  try {
+    for (var i = 0; i < localStorage.length; i++) {
+      var k = localStorage.key(i);
+      if (k.indexOf('wb:last:') === 0) { var r = JSON.parse(localStorage.getItem(k) || 'null'); if (r && r.url) here[r.url] = 1; }
+    }
+  } catch (e) {}
+  tocs.forEach(function (a) {
+    var p = a.pathname, done = false;
+    try { done = localStorage.getItem('wb:read:' + p) === '1'; } catch (e) {}
+    if (here[p]) a.classList.add('here');
+    else if (done) a.classList.add('done');
+  });
 })();
 
 // 選單：碰到「小說」滑出看過的小說，手機點箭頭展開
