@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<!-- 垣：長髮及肩綁高馬尾、中性、球衣 -->
+<rect width="64" height="64" fill="#ecdfe3"/>
+<path d="M15.5 31 C14 14 23 8.5 32 8.5 C41 8.5 50 14 48.5 31 Z" fill="#241b1a"/>
+<path d="M42 12 C52 10 56 20 52 34 C50 27 47 21 42 18 Z" fill="#241b1a"/>
+<rect x="27" y="45" width="10" height="9" fill="#e2b896"/><path d="M9 64 C11 54 20 51 32 51 C44 51 53 54 55 64 Z" fill="#8c4a5e"/><path d="M26 51 L32 57 L38 51" fill="none" stroke="#f3e9ec" stroke-width="1.6"/><text x="32" y="63" font-size="7" text-anchor="middle" fill="#f3e9ec" font-family="sans-serif" font-weight="bold">7</text>
+<ellipse cx="17.3" cy="35" rx="2.4" ry="3.4" fill="#e2b896"/><ellipse cx="46.7" cy="35" rx="2.4" ry="3.4" fill="#e2b896"/>
+<ellipse cx="32" cy="33" rx="14.5" ry="16" fill="#e2b896"/>
+<ellipse cx="25.5" cy="34" rx="3" ry="3.9" fill="#3a2d3f"/><ellipse cx="25.5" cy="35" rx="2" ry="2.6" fill="#5e4234"/><circle cx="24.5" cy="32.5" r="1" fill="#fff"/><ellipse cx="38.5" cy="34" rx="3" ry="3.9" fill="#3a2d3f"/><ellipse cx="38.5" cy="35" rx="2" ry="2.6" fill="#5e4234"/><circle cx="37.5" cy="32.5" r="1" fill="#fff"/>
+<path d="M22 28.8 C24.5 27.6 27 27.8 29 29" stroke="#2a2220" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M42 28.8 C39.5 27.6 37 27.8 35 29" stroke="#2a2220" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+<path d="M29.5 42.5 C31 43.4 33 43.4 34.5 42.5" stroke="#9a5a52" stroke-width="1.1" fill="none" stroke-linecap="round"/>
+<path d="M16 32 C15 17 24 11 32 11 C40 11 49 17 48 32 C46.5 22.5 40 18 32 17.5 C24 18 17.5 22.5 16 32 Z" fill="#241b1a"/>
+<rect x="40.5" y="13" width="4" height="3" rx="1" fill="#c9a24a" transform="rotate(-30 42.5 14.5)"/>
+</svg>
