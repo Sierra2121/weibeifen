@@ -5,9 +5,11 @@ on:
   push:
     branches: [main]
     paths: [".github/threads/outbox/**"]
-  # 每天晚上 8 點左右（台灣時間）從舊章節發一篇
+  # 每天三篇（台灣時間）：中午 12:30、晚上 6:30、晚上 11:00（提早幾分鐘，避開整點塞車）
   schedule:
-    - cron: "47 11 * * *"
+    - cron: "27 4 * * *"
+    - cron: "27 10 * * *"
+    - cron: "57 14 * * *"
   workflow_dispatch:
 
 permissions:
